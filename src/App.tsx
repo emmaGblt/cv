@@ -1,7 +1,11 @@
+import PresentationCard from "@components/Presentation/PresentationCard";
+import Card from "@components/ui/Card";
+
 function App() {
   return (
-    <div>
-      <h1 className="text-red-400">Site d'Emma</h1>
+    <div className="my-24 mx-36 grid grid-cols-[2fr_5fr] gap-x-6">
+      <PresentationCard />
+      <Card>Hello, I'm another Emma!</Card>
     </div>
   );
 }
