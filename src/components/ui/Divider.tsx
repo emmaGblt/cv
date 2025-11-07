@@ -1,7 +1,16 @@
-type DividerProps = { className?: string };
+import { cn } from "@/utils/classes";
 
-function Divider({ className }: DividerProps) {
-  return <hr className={className} />;
+type DividerProps = { className?: string; type?: "thin" | "thick" };
+
+function Divider({ className, type = "thin" }: DividerProps) {
+  return (
+    <hr
+      className={cn(
+        type === "thick" && "h-2 bg-amber-400 rounded-4xl border-none",
+        className
+      )}
+    />
+  );
 }
 
 export default Divider;
