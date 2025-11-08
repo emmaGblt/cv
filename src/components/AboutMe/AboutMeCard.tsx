@@ -1,10 +1,11 @@
 import Card from "../ui/Card";
 import Divider from "../ui/Divider";
+import SkillsList from "./SkillsList";
 
 function AboutMeCard() {
   return (
     <Card>
-      <h1 className="font-bold text-3xl">À propos de moi</h1>
+      <h2 className="font-bold text-3xl">À propos de moi</h2>
       <Divider className="w-1/12 mt-4 mb-6" type="thick" />
       <div className="flex flex-col gap-y-4">
         <p>
@@ -19,6 +20,12 @@ function AboutMeCard() {
           malesuada quam volutpat vitae. Ut ac vehicula nunc, nec vestibulum
           sapien. Nam at posuere lorem.
         </p>
+      </div>
+      <div className="mt-6">
+        <h3 className="font-bold text-xl mb-8">Compétences</h3>
+        <div className="relative h-40 overflow-x-auto scroll-smooth">
+          <SkillsList />
+        </div>
       </div>
     </Card>
   );

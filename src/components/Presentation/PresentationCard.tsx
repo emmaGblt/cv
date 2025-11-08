@@ -15,7 +15,7 @@ function PresentationCard() {
           className="rounded-4xl w-1/2 aspect-square mb-6 mx-auto"
           alt="Une photo de ma chienne Pichu et moi"
         />
-        <p className="mb-3 text-center text-xl font-bold">Emma Guilbault</p>
+        <h1 className="mb-3 text-center text-xl font-bold">Emma Guilbault</h1>
         <Tag text="Développeuse full stack" />
         <div className="w-5/6 text-center">
           <Divider className="my-7" />
