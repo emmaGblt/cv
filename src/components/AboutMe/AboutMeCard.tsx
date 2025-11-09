@@ -1,6 +1,7 @@
 import Card from "../ui/Card";
 import Divider from "../ui/Divider";
 import SkillsList from "./SkillsList";
+import "./index.css";
 
 function AboutMeCard() {
   return (
@@ -21,9 +22,9 @@ function AboutMeCard() {
           sapien. Nam at posuere lorem.
         </p>
       </div>
-      <div className="mt-6">
+      <div className="mt-6 holographic-cards-scrollbar">
         <h3 className="font-bold text-xl">Compétences</h3>
-        <div className="relative h-48 overflow-x-auto scroll-smooth">
+        <div className="relative h-48 overflow-x-auto">
           <SkillsList />
         </div>
       </div>
