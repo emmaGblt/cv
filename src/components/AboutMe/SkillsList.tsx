@@ -12,7 +12,7 @@ import Typescript from "@assets/typescript.svg?react";
 function SkillsList() {
   // gérer le fait que la liste dépasse horizontalement
   return (
-    <ul className="absolute top-0 left-0 bottom-0 flex justify-start gap-x-14 px-6">
+    <ul className="absolute top-0 left-0 bottom-0 flex items-center justify-start gap-x-10 px-6">
       <AnimatedSkillItem Icon={Javascript} />
       <AnimatedSkillItem Icon={Typescript} />
       <AnimatedSkillItem Icon={Python} />

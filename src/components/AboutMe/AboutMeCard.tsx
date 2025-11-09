@@ -22,8 +22,8 @@ function AboutMeCard() {
         </p>
       </div>
       <div className="mt-6">
-        <h3 className="font-bold text-xl mb-8">Compétences</h3>
-        <div className="relative h-40 overflow-x-auto scroll-smooth">
+        <h3 className="font-bold text-xl">Compétences</h3>
+        <div className="relative h-48 overflow-x-auto scroll-smooth">
           <SkillsList />
         </div>
       </div>
