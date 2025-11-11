@@ -1,11 +1,10 @@
-import Card from "../ui/Card";
 import Divider from "../ui/Divider";
 import SkillsList from "./SkillsList";
 import "./index.css";
 
-function AboutMeCard() {
+function AboutMeContent() {
   return (
-    <Card>
+    <>
       <h2 className="font-bold text-3xl">À propos de moi</h2>
       <Divider className="w-1/12 mt-4 mb-6" type="thick" />
       <div className="flex flex-col gap-y-4">
@@ -28,8 +27,8 @@ function AboutMeCard() {
           <SkillsList />
         </div>
       </div>
-    </Card>
+    </>
   );
 }
 
-export default AboutMeCard;
+export default AboutMeContent;
