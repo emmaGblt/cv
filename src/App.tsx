@@ -1,6 +1,6 @@
 import { PresentationCard } from "@components/Presentation";
-import CardWithTabs from "./components/ui/CardWithTabs";
-import AboutMeContent from "./components/AboutMe/AboutMeCard";
+import CardWithTabs from "@components/ui/CardWithTabs";
+import AboutMeContent from "@components/AboutMe/AboutMeCard";
 
 function App() {
   return (
