@@ -1,42 +1,74 @@
 import AnimatedSkillItem from "./AnimatedSkillItem";
-import ReactLogo from "@assets/react.svg?react";
-import DjangoLogo from "@assets/django.svg?react";
-import Github from "@assets/github.svg?react";
-import TailwindCSS from "@assets/tailwindcss.svg?react";
-import Vitest from "@assets/vitest.svg?react";
-import TestingLibrary from "@assets/testing-library.svg?react";
-import Python from "@assets/python.svg?react";
-import Javascript from "@assets/javascript.svg?react";
-import Typescript from "@assets/typescript.svg?react";
-import ReactRouter from "@assets/react-router.svg?react";
-import Vite from "@assets/vite.svg?react";
+import reactLogo from "@assets/react.svg";
+import djangoLogo from "@assets/django.svg";
+import githubLogo from "@assets/github.svg";
+import tailwindCSSLogo from "@assets/tailwindcss.svg";
+import vitestLogo from "@assets/vitest.svg";
+import testingLibraryLogo from "@assets/testing-library.svg";
+import pythonLogo from "@assets/python.svg";
+import javascriptLogo from "@assets/javascript.svg";
+import typescriptLogo from "@assets/typescript.svg";
+import reactRouterLogo from "@assets/react-router.svg";
+import viteLogo from "@assets/vite.svg";
 
 function SkillsList() {
   // gérer le fait que la liste dépasse horizontalement
   return (
     <ul className="absolute top-0 left-0 bottom-0 flex items-center justify-start gap-x-10 px-6">
       <AnimatedSkillItem
-        Icon={Javascript}
+        svgSrc={javascriptLogo}
         href="https://developer.mozilla.org/fr/docs/Web/JavaScript"
+        alt="Logo du langage Javascript"
       />
       <AnimatedSkillItem
-        Icon={Typescript}
+        svgSrc={typescriptLogo}
         href="https://www.typescriptlang.org/"
+        alt="Logo du langage Typescript"
       />
-      <AnimatedSkillItem Icon={Python} href="https://www.python.org/" />
-      <AnimatedSkillItem Icon={ReactLogo} href="https://fr.react.dev/" />
-      <AnimatedSkillItem Icon={ReactRouter} href="https://reactrouter.com/" />
       <AnimatedSkillItem
-        Icon={DjangoLogo}
+        svgSrc={reactLogo}
+        href="https://fr.react.dev/"
+        alt="Logo de la librairie React"
+      />
+      <AnimatedSkillItem
+        svgSrc={pythonLogo}
+        href="https://www.python.org/"
+        alt="Logo du langage Python"
+      />
+      <AnimatedSkillItem
+        svgSrc={djangoLogo}
         href="https://www.djangoproject.com/"
+        alt="Logo du framework Django"
       />
-      <AnimatedSkillItem Icon={Github} href="https://github.com/" />
-      <AnimatedSkillItem Icon={TailwindCSS} href="https://tailwindcss.com/" />
-      <AnimatedSkillItem Icon={Vite} href="https://vite.dev/" />
-      <AnimatedSkillItem Icon={Vitest} href="https://vitest.dev/" />
       <AnimatedSkillItem
-        Icon={TestingLibrary}
+        svgSrc={reactRouterLogo}
+        href="https://reactrouter.com/"
+        alt="Logo de React Router"
+      />
+      <AnimatedSkillItem
+        svgSrc={githubLogo}
+        href="https://github.com/"
+        alt="Logo de Github"
+      />
+      <AnimatedSkillItem
+        svgSrc={tailwindCSSLogo}
+        href="https://tailwindcss.com/"
+        alt="Logo du framework CSS TailwindCSS"
+      />
+      <AnimatedSkillItem
+        svgSrc={viteLogo}
+        href="https://vite.dev/"
+        alt="Logo de l'outil de build Vite"
+      />
+      <AnimatedSkillItem
+        svgSrc={vitestLogo}
+        href="https://vitest.dev/"
+        alt="Logo du framework de test Vitest"
+      />
+      <AnimatedSkillItem
+        svgSrc={testingLibraryLogo}
         href="https://testing-library.com/"
+        alt="Logo de la librairie de test Testing Library"
       />
     </ul>
   );
