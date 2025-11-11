@@ -4,7 +4,7 @@ import AboutMeContent from "./components/AboutMe/AboutMeCard";
 
 function App() {
   return (
-    <div className="my-24 mx-36 grid grid-cols-[2fr_5fr] gap-x-6">
+    <div className="mt-24 mb-12 mx-36 grid grid-cols-[2fr_5fr] gap-x-6">
       <PresentationCard />
       <CardWithTabs
         defaultValue="about-me"

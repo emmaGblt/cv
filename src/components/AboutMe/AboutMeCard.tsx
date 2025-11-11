@@ -5,8 +5,8 @@ import "./index.css";
 function AboutMeContent() {
   return (
     <>
-      <h2 className="font-bold text-3xl">À propos de moi</h2>
-      <Divider className="w-1/12 mt-4 mb-6" type="thick" />
+      <h2 className="font-bold text-3xl mb-4">À propos de moi</h2>
+      <Divider className="w-1/12 mb-8" type="thick" />
       <div className="flex flex-col gap-y-4">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi
@@ -21,8 +21,12 @@ function AboutMeContent() {
           sapien. Nam at posuere lorem.
         </p>
       </div>
-      <div className="mt-6 holographic-cards-scrollbar">
-        <h3 className="font-bold text-xl">Compétences</h3>
+      <div className="mt-8 holographic-cards-scrollbar">
+        <h3 className="font-bold text-xl mb-4">Compétences</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi
+          ligula, dignissim vitae placerat eu, convallis eu est.
+        </p>
         <div className="relative h-48 overflow-x-auto">
           <SkillsList />
         </div>

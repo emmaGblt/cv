@@ -8,7 +8,7 @@ import LinkedInLogo from "@assets/linkedin.svg?react";
 
 function PresentationCard() {
   return (
-    <Card>
+    <Card className="h-fit">
       <div className="flex items-center flex-col">
         <img
           src={me}
