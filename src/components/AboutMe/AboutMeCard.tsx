@@ -7,25 +7,43 @@ function AboutMeContent() {
     <>
       <h2 className="font-bold text-3xl mb-4">À propos de moi</h2>
       <Divider className="w-1/12 mb-8" type="thick" />
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-4 text-justify">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi
-          ligula, dignissim vitae placerat eu, convallis eu est. Vestibulum quis
-          vulputate odio, sed dignissim dui. In auctor leo consectetur sem
-          cursus, sit amet porttitor ipsum posuere. Vivamus nec convallis sem,
-          semper vestibulum risus.
+          Développeuse full stack depuis 5 ans, je travaille sur des{" "}
+          <strong className="font-semibold">projets à impact et engagés</strong>{" "}
+          !
         </p>
         <p>
-          Nunc lacinia euismod porttitor. Aliquam euismod scelerisque sem, a
-          malesuada quam volutpat vitae. Ut ac vehicula nunc, nec vestibulum
-          sapien. Nam at posuere lorem.
+          Dans mon parcours, j'ai été amenée à travailler sur des applications
+          Saas avec Django, Ruby on Rails et React (React Router / Remix et
+          Typescript). J'ai également participé à la création et à la maintenant
+          d'un Design System et d'une librairie de composants (Storybook).
+        </p>
+        <p>
+          J'aime collaborer, partager mes connaissances et le{" "}
+          <strong className="font-semibold">travail d'équipe</strong>.
+        </p>
+        <p>
+          J'ai à cœur de fournir un code de qualité, robuste et rigoureusement
+          testé.
+        </p>
+        <p>
+          J’ai travaillé au sein d’équipes pluridisciplinaires, en{" "}
+          <strong className="font-semibold">collaboration</strong> avec des
+          Product Manager, des Designer et d’autres développeurs, sur des cycles
+          de développement courts et itératifs. J’ai réalisé quotidiennement des{" "}
+          <strong className="font-semibold">reviews de code</strong> et
+          participé à des sessions de{" "}
+          <strong className="font-semibold">peer programming</strong> et de
+          conception, toujours avec le souci de mettre mon expérience et mes
+          connaissances au service de l’équipe.
         </p>
       </div>
       <div className="mt-8 holographic-cards-scrollbar">
         <h3 className="font-bold text-xl mb-4">Compétences</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi
-          ligula, dignissim vitae placerat eu, convallis eu est.
+          Au fil des années, j'ai travaillé avec différentes technologies. En
+          voici quelques-unes !
         </p>
         <div className="relative h-48 overflow-x-auto">
           <SkillsList />
