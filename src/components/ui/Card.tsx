@@ -1,4 +1,4 @@
-import { cn } from "@/utils/classes";
+import { cn } from "@utils/classes";
 import type { PropsWithChildren } from "react";
 
 interface CardProps extends PropsWithChildren {
