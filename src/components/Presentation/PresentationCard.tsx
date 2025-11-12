@@ -21,16 +21,19 @@ function PresentationCard() {
           <Divider className="my-7" />
           <ul className="flex flex-col gap-y-6">
             <PresentationListItem
+              key="email"
               Icon={MapPin}
               title="EMAIL"
               text="emmaguilbault1504@gmail.com"
             />
             <PresentationListItem
+              key="phone"
               Icon={Phone}
               title="TÉLÉPHONE"
               text="06.11.69.73.57"
             />
             <PresentationListItem
+              key="address"
               Icon={Mail}
               title="ADRESSE"
               text="Normandie, France"
