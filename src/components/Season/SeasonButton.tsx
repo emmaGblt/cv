@@ -3,6 +3,7 @@ import type { TSeason } from "@/types";
 import { cn } from "@utils/classes";
 import { Flower2, Leaf, Snowflake, Sun, type LucideIcon } from "lucide-react";
 import { use } from "react";
+import { getNextSeason } from "@/utils/seasons";
 
 type SeasonButtonProps = {
   updateSeason: (newSeason: TSeason) => void;
@@ -34,17 +35,8 @@ function SeasonButton({ updateSeason }: SeasonButtonProps) {
   const SeasonIcon = SEASON_ICONS[season];
 
   const onSeasonChange = () => {
-    const currentSeasonIndex = ORDERED_SEASONS.indexOf(season);
-    const numberOfSeasons = ORDERED_SEASONS.length;
-
-    if (currentSeasonIndex >= 0) {
-      const nextSeasonIndex =
-        currentSeasonIndex === numberOfSeasons - 1 ? 0 : currentSeasonIndex + 1;
-
-      if (nextSeasonIndex >= 0 && nextSeasonIndex < numberOfSeasons) {
-        updateSeason(ORDERED_SEASONS[nextSeasonIndex]);
-      }
-    }
+    const nextSeason = getNextSeason(season, ORDERED_SEASONS);
+    updateSeason(nextSeason);
   };
 
   // ADD ANIMATION ON ICON AND TEXT
