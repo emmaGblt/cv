@@ -1,4 +1,4 @@
-import { cn } from "@/utils/classes";
+import { cn } from "@utils/classes";
 
 type DividerProps = { className?: string; type?: "thin" | "thick" };
 

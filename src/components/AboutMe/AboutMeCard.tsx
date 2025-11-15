@@ -16,8 +16,9 @@ function AboutMeContent() {
         <p>
           Dans mon parcours, j'ai été amenée à travailler sur des applications
           Saas avec Django, Ruby on Rails et React (React Router / Remix et
-          Typescript). J'ai également participé à la création et à la maintenant
-          d'un Design System et d'une librairie de composants (Storybook).
+          Typescript). J'ai également participé à la création et à la
+          maintenance d'un Design System et d'une librairie de composants
+          (Storybook).
         </p>
         <p>
           J'aime collaborer, partager mes connaissances et le{" "}
