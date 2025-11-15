@@ -4,6 +4,7 @@ import { cn } from "@utils/classes";
 import { Flower2, Leaf, Snowflake, Sun, type LucideIcon } from "lucide-react";
 import { use } from "react";
 import { getNextSeason } from "@/utils/seasons";
+import "./index.css";
 
 type SeasonButtonProps = {
   updateSeason: (newSeason: TSeason) => void;
@@ -31,15 +32,13 @@ const SEASON_ICONS: Record<TSeason, LucideIcon> = {
 };
 
 function SeasonButton({ updateSeason }: SeasonButtonProps) {
-  const season = use(SeasonContext);
-  const SeasonIcon = SEASON_ICONS[season];
+  const currentSeason = use(SeasonContext);
+  const SeasonIcon = SEASON_ICONS[currentSeason];
 
   const onSeasonChange = () => {
-    const nextSeason = getNextSeason(season, ORDERED_SEASONS);
+    const nextSeason = getNextSeason(currentSeason, ORDERED_SEASONS);
     updateSeason(nextSeason);
   };
-
-  // ADD ANIMATION ON ICON AND TEXT
 
   return (
     <button
@@ -47,11 +46,16 @@ function SeasonButton({ updateSeason }: SeasonButtonProps) {
       onClick={onSeasonChange}
       className={cn(
         "z-10 cursor-pointer fixed top-6 right-8 min-w-[120px]",
-        "bg-white  border border-gray-400 py-2 px-4 rounded-3xl text-sm flex items-center gap-x-2"
+        "bg-white  border border-gray-400 py-2 px-4 rounded-3xl text-sm font-semibold"
       )}
     >
-      <SeasonIcon className="size-4 shrink-0" />
-      {SEASON_NAMES[season]}
+      <span
+        className="slideInSeason flex items-center gap-x-2"
+        key={currentSeason}
+      >
+        <SeasonIcon className="size-4 shrink-0" />
+        {SEASON_NAMES[currentSeason]}
+      </span>
     </button>
   );
 }

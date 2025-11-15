@@ -1,25 +1,15 @@
 @keyframes slideInSeason {
   from {
-    transform: translateY(-14px);
+    transform: translateY(-4px);
+    opacity: 0%;
   }
   to {
     transform: translateY(0%);
+    opacity: 100%;
   }
 }
 
-@keyframes slideOutSeason {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(14px);
-  }
-}
-
-.show {
-  animation: 500ms slideInSeason ease-in;
-}
-
-.disappear {
-  animation: 500ms slideOutSeason ease-in;
+.slideInSeason {
+  animation: 500ms slideInSeason ease-out;
+  transition: all;
 }
