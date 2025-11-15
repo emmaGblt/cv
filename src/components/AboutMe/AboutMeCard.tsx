@@ -4,7 +4,7 @@ import "./index.css";
 
 function AboutMeContent() {
   return (
-    <>
+    <div>
       <h2 className="font-bold text-3xl mb-4">À propos de moi</h2>
       <Divider className="w-1/12 mb-8" type="thick" />
       <div className="flex flex-col gap-y-4 text-justify">
@@ -50,7 +50,7 @@ function AboutMeContent() {
           <SkillsList />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

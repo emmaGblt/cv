@@ -1,6 +1,7 @@
 import { Tabs as BaseUiTabs } from "@base-ui-components/react/tabs";
 import type { ComponentProps } from "react";
 import Card from "./Card";
+import { cn } from "@/utils/classes";
 
 type BaseUiTabProps = ComponentProps<typeof BaseUiTabs.Tab>;
 type BaseUiRootProps = ComponentProps<typeof BaseUiTabs.Root>;
@@ -20,11 +21,16 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
   return (
     <Card className="relative">
       <BaseUiTabs.Root defaultValue={defaultValue} orientation="horizontal">
-        <BaseUiTabs.List className="absolute border border-t-0 border-gray-400 right-0 top-0 px-10 py-4 flex gap-x-8 bg-amber-300 rounded-tr-3xl rounded-bl-3xl">
+        <BaseUiTabs.List
+          className={cn(
+            "absolute border-3 border-t-0 border-r-0 right-0 top-0 px-10 py-4 flex gap-x-8 rounded-tr-3xl rounded-bl-3xl",
+            "bg-secondary-2/30 border-secondary-3"
+          )}
+        >
           {tabs.map((tab) => (
             <BaseUiTabs.Tab
               value={tab.value}
-              className="font-semibold cursor-pointer text-gray-500 hover:text-gray-800 active:text-gray-800 data-selected:text-amber-800"
+              className="font-bold cursor-pointer text-secondary-3 hover:text-primary data-selected:text-primary"
             >
               {tab.title}
             </BaseUiTabs.Tab>

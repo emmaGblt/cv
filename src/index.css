@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@custom-variant spring (&:where([data-theme="spring"] *));
+@custom-variant summer (&:where([data-theme="summer"] *));
+@custom-variant autumn (&:where([data-theme="autumn"] *));
+@custom-variant winter (&:where([data-theme="winter"] *));
+
 @theme {
   --font-weight-*: initial;
   --font-weight-normal: 400;
@@ -24,6 +29,18 @@
   --text-4xl: clamp(1.5768rem, 1.1773rem + 1.6387vi, 2.4883rem);
   --text-4xl--line-height: 1.5;
 
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Default theme is autumn */
+  /* See https://coolors.co/palettes/popular/autumn */
+  --color-primary: #283618;
+  --color-secondary-1: #fefae0;
+  --color-secondary-2: #dda15e;
+  --color-secondary-3: #bc6c25;
+  --color-secondary-4: #606c38;
+
   /* --spacing-*: initial;
   --spacing-0: 0px;
   --spacing-none: 0px;
@@ -45,12 +62,31 @@
   --radius-lg: clamp(21px, 19.6854px + 0.3371vi, 24px);
   --radius-xl: clamp(28px, 26.2472px + 0.4494vi, 32px);
   --radius-full: 9999px; */
+}
 
-  /* --shadow-*: initial;
-  --shadow-sm: 0px 2px 3px 0px rgba(59, 46, 129, 0.04);
-  --shadow-md: 0px 1px 8px 0px rgba(59, 46, 129, 0.06);
-  --shadow-lg: 0px 5px 15px 0px rgba(59, 46, 129, 0.08);
-  --shadow-xl: 0px 2px 25px 0px rgba(59, 46, 129, 0.08);
-  --shadow-inner: 0px 0px 5px 0px rgba(59, 46, 129, 0.09) inset;
-  --shadow-none: 0 0 #0000; */
+[data-theme="winter"] {
+  /* See https://coolors.co/palettes/popular/winter */
+  --color-one: #cdb4db;
+  --color-two: #ffc8dd;
+  --color-three: #ffafcc;
+  --color-four: #bde0fe;
+  --color-five: #a2d2ff;
+}
+
+[data-theme="spring"] {
+  /* See https://coolors.co/palettes/popular/winter */
+  --color-one: #f6bd60;
+  --color-two: #f7ede2;
+  --color-three: #f5cac3;
+  --color-four: #84a59d;
+  --color-five: #f28482;
+}
+
+[data-theme="summer"] {
+  /* See https://coolors.co/palettes/popular/winter */
+  --color-one: #585123;
+  --color-two: #eec170;
+  --color-three: #f2a65a;
+  --color-four: #f58549;
+  --color-five: #772f1a;
 }

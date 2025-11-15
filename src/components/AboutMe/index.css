@@ -1,5 +1,5 @@
 .holographic-card {
-  background: var(--color-gray-300);
+  background-color: var(--color-secondary-2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@
     0deg,
     transparent,
     transparent 30%,
-    var(--color-amber-400)
+    var(--color-secondary-3)
   );
   transform: rotate(-45deg);
   transition: all 0.5s ease;
@@ -32,7 +32,7 @@
 
 .holographic-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px var(--color-amber-400);
+  box-shadow: 0 0 20px var(--color-secondary-3);
 }
 
 .holographic-card:hover::before {
@@ -42,8 +42,8 @@
 
 /* -- Holographic cards scrollbar -- */
 .holographic-cards-scrollbar {
-  --scrollbar-color-track: var(--color-gray-600);
-  --scrollbar-color-thumb: var(--color-amber-400);
+  --scrollbar-color-track: var(--color-primary);
+  --scrollbar-color-thumb: var(--color-secondary-2);
 
   @supports not selector(::-webkit-scrollbar) {
     scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
@@ -65,10 +65,6 @@
     ::-webkit-scrollbar-thumb {
       background-color: var(--scrollbar-color-thumb);
       border-radius: var(--radius-4xl);
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: var(--color-amber-600);
     }
   }
 }

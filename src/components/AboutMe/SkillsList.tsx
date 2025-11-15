@@ -12,7 +12,6 @@ import reactRouterLogo from "@assets/react-router.svg";
 import viteLogo from "@assets/vite.svg";
 
 function SkillsList() {
-  // gérer le fait que la liste dépasse horizontalement
   return (
     <ul className="absolute top-0 left-0 bottom-0 flex items-center justify-start gap-x-10 px-6">
       <AnimatedSkillItem

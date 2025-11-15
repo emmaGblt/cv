@@ -46,14 +46,14 @@ function SeasonButton({ updateSeason }: SeasonButtonProps) {
       onClick={onSeasonChange}
       className={cn(
         "z-10 cursor-pointer fixed top-6 right-8 min-w-[120px]",
-        "bg-white  border border-gray-400 py-2 px-4 rounded-3xl text-sm font-semibold"
+        "bg-secondary-1 border-3 border-primary py-2.5 px-4.5 rounded-3xl font-semibold"
       )}
     >
       <span
         className="slideInSeason flex items-center gap-x-2"
         key={currentSeason}
       >
-        <SeasonIcon className="size-4 shrink-0" />
+        <SeasonIcon className="size-5 shrink-0" />
         {SEASON_NAMES[currentSeason]}
       </span>
     </button>
