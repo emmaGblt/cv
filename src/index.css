@@ -36,10 +36,12 @@
   /* Default theme is autumn */
   /* See https://coolors.co/palettes/popular/autumn */
   --color-primary: #283618;
-  --color-secondary-1: #fefae0;
-  --color-secondary-2: #dda15e;
-  --color-secondary-3: #bc6c25;
-  --color-secondary-4: #606c38;
+
+  --color-background: #606c38;
+  --color-background-2: #fefae0;
+
+  --color-secondary-1: #dda15e;
+  --color-secondary-2: #bc6c25;
 
   /* --spacing-*: initial;
   --spacing-0: 0px;
@@ -66,11 +68,13 @@
 
 [data-theme="winter"] {
   /* See https://coolors.co/palettes/popular/winter */
-  --color-one: #cdb4db;
-  --color-two: #ffc8dd;
-  --color-three: #ffafcc;
-  --color-four: #bde0fe;
-  --color-five: #a2d2ff;
+  --color-primary: #022225;
+
+  --color-background: #93241b;
+  --color-background-2: #eae3d0;
+
+  --color-secondary-1: #495d57;
+  --color-secondary-2: #4c383f;
 }
 
 [data-theme="spring"] {
@@ -84,9 +88,9 @@
 
 [data-theme="summer"] {
   /* See https://coolors.co/palettes/popular/winter */
-  --color-one: #585123;
-  --color-two: #eec170;
-  --color-three: #f2a65a;
-  --color-four: #f58549;
-  --color-five: #772f1a;
+  --color-primary: #4f6d7a;
+  --color-secondary-1: #dbe9ee;
+  --color-secondary-2: #c0d6df;
+  --color-secondary-3: #4a6fa5;
+  --color-secondary-4: #166088;
 }

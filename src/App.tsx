@@ -14,7 +14,7 @@ function App() {
     <SeasonContext value={currentSeason}>
       <div
         data-theme={currentSeason}
-        className="py-24 h-dvh px-36 grid grid-cols-[2fr_5fr] gap-x-6 relative text-primary bg-secondary-4/80"
+        className="py-24 h-dvh px-36 grid grid-cols-[2fr_5fr] gap-x-6 relative text-primary bg-background/80"
       >
         <SeasonButton updateSeason={setCurrentSeason} />
         <PresentationCard />

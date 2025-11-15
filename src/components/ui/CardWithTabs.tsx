@@ -24,13 +24,13 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
         <BaseUiTabs.List
           className={cn(
             "absolute border-3 border-t-0 border-r-0 right-0 top-0 px-10 py-4 flex gap-x-8 rounded-tr-3xl rounded-bl-3xl",
-            "bg-secondary-2/30 border-secondary-3"
+            "bg-secondary-2/30 border-primary"
           )}
         >
           {tabs.map((tab) => (
             <BaseUiTabs.Tab
               value={tab.value}
-              className="font-bold cursor-pointer text-secondary-3 hover:text-primary data-selected:text-primary"
+              className="font-bold cursor-pointer text-secondary-2 hover:text-primary data-selected:text-primary"
             >
               {tab.title}
             </BaseUiTabs.Tab>

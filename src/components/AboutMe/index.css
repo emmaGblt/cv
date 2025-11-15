@@ -1,5 +1,5 @@
 .holographic-card {
-  background-color: var(--color-secondary-2);
+  background-color: var(--color-secondary-1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@
     0deg,
     transparent,
     transparent 30%,
-    var(--color-secondary-3)
+    var(--color-secondary-2)
   );
   transform: rotate(-45deg);
   transition: all 0.5s ease;
@@ -32,7 +32,7 @@
 
 .holographic-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px var(--color-secondary-3);
+  box-shadow: 0 0 20px var(--color-secondary-2);
 }
 
 .holographic-card:hover::before {

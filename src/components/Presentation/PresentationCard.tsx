@@ -45,7 +45,7 @@ function PresentationCard() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedInLogo className="fill-secondary-3 size-6" />
+            <LinkedInLogo className="fill-secondary-2 size-6" />
           </a>
         </div>
       </div>
