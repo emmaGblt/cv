@@ -1,15 +1,32 @@
 .holographic-card {
   background-color: var(--color-secondary-1);
+  border-color: var(--color-primary);
+  border-width: 3px;
+  box-shadow: var(--shadow-sm);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius-4xl);
+  border-radius: var(--radius-xl);
   transition: all 0.5s ease;
+  overflow: visible;
 }
 
-.holographic-card::before {
+.holographic-card:hover {
+  transform: scale(118%);
+}
+
+.card-name {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  border-width: 2px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-background-2);
+}
+
+/* .holographic-card::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -26,11 +43,11 @@
   transition: all 0.5s ease;
   opacity: 0;
   z-index: 2;
-}
+} */
 
 /* -- Hologrphic card -- */
 
-.holographic-card:hover {
+/* .holographic-card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px var(--color-secondary-2);
 }
@@ -38,7 +55,7 @@
 .holographic-card:hover::before {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
-}
+} */
 
 /* -- Holographic cards scrollbar -- */
 .holographic-cards-scrollbar {

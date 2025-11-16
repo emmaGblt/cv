@@ -46,7 +46,7 @@ function SeasonButton({ updateSeason }: SeasonButtonProps) {
       onClick={onSeasonChange}
       className={cn(
         "z-10 cursor-pointer fixed top-6 right-8 min-w-[120px]",
-        "bg-background-2 border-3 border-primary py-2.5 px-4.5 rounded-3xl font-semibold"
+        "bg-background-2 border-3 border-primary py-2.5 px-4.5 font-semibold shadow-sm shadow-primary/70 rounded-xl"
       )}
     >
       <span

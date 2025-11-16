@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import "tailwindcss";
 
 @custom-variant spring (&:where([data-theme="spring"] *));
@@ -6,6 +7,10 @@
 @custom-variant winter (&:where([data-theme="winter"] *));
 
 @theme {
+  /* Font families*/
+  --font-cartoon: "Luckiest Guy", cursive;
+
+  /* Font weights */
   --font-weight-*: initial;
   --font-weight-normal: 400;
   --font-weight-semibold: 500;
@@ -35,11 +40,12 @@
 
   /* Default theme is autumn */
   /* See https://coolors.co/palettes/popular/autumn */
-  --color-primary: #283618;
-  --color-background: #606c38;
-  --color-background-2: #fefae0;
-  --color-secondary-1: #dda15e;
-  --color-secondary-2: #bc6c25;
+  --color-primary: #264653;
+  --color-background: #e76f51;
+  --color-background-2: #e9c46a;
+  --color-secondary-1: #f4a261;
+  --color-secondary-2: #2a9d8f;
+  --color-light: #f2e7c4;
 
   /* --spacing-*: initial;
   --spacing-0: 0px;
@@ -62,6 +68,19 @@
   --radius-lg: clamp(21px, 19.6854px + 0.3371vi, 24px);
   --radius-xl: clamp(28px, 26.2472px + 0.4494vi, 32px);
   --radius-full: 9999px; */
+
+  /* Shadows */
+  --shadow-*: initial;
+  --shadow-xs: 3px 2px 2px rgba(0, 0, 0, 0.25);
+  --shadow-sm: 6px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow: 18px 14px 6px rgba(0, 0, 0, 0.25);
+
+  /* Text shadows */
+  --text-shadow-*: initial;
+  /* text shadow + text borders */
+  --text-shadow-md: 5px 4px 5px rgba(0, 0, 0, 0.25), -2px 0 rgba(0, 0, 0, 0.25),
+    0 2px rgba(0, 0, 0, 0.25), 2px 0 rgba(0, 0, 0, 0.25),
+    0 -2px rgba(0, 0, 0, 0.25);
 }
 
 [data-theme="winter"] {
@@ -89,4 +108,14 @@
   --color-background-2: #f8f2cb;
   --color-secondary-1: #faedcd;
   --color-secondary-2: #b6c190;
+}
+
+.cartoon-title {
+  font-family: var(--font-cartoon);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.cartoon-title:hover {
+  transform: scale(114%);
 }
