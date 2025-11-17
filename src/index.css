@@ -1,6 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import "tailwindcss";
 
+@custom-variant spring (&:where([data-theme="spring"] *));
+@custom-variant summer (&:where([data-theme="summer"] *));
+@custom-variant autumn (&:where([data-theme="autumn"] *));
+@custom-variant winter (&:where([data-theme="winter"] *));
+
 @theme {
+  /* Font families*/
+  --font-cartoon: "Luckiest Guy", cursive;
+
+  /* Font weights */
   --font-weight-*: initial;
   --font-weight-normal: 400;
   --font-weight-semibold: 500;
@@ -24,6 +34,19 @@
   --text-4xl: clamp(1.5768rem, 1.1773rem + 1.6387vi, 2.4883rem);
   --text-4xl--line-height: 1.5;
 
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Default theme is autumn */
+  /* See https://coolors.co/palettes/popular/autumn */
+  --color-primary: #264653;
+  --color-background: #e76f51;
+  --color-background-2: #e9c46a;
+  --color-secondary-1: #f4a261;
+  --color-secondary-2: #2a9d8f;
+  --color-light: #f2e7c4;
+
   /* --spacing-*: initial;
   --spacing-0: 0px;
   --spacing-none: 0px;
@@ -46,11 +69,53 @@
   --radius-xl: clamp(28px, 26.2472px + 0.4494vi, 32px);
   --radius-full: 9999px; */
 
-  /* --shadow-*: initial;
-  --shadow-sm: 0px 2px 3px 0px rgba(59, 46, 129, 0.04);
-  --shadow-md: 0px 1px 8px 0px rgba(59, 46, 129, 0.06);
-  --shadow-lg: 0px 5px 15px 0px rgba(59, 46, 129, 0.08);
-  --shadow-xl: 0px 2px 25px 0px rgba(59, 46, 129, 0.08);
-  --shadow-inner: 0px 0px 5px 0px rgba(59, 46, 129, 0.09) inset;
-  --shadow-none: 0 0 #0000; */
+  /* Shadows */
+  --shadow-*: initial;
+  --shadow-xs: 3px 2px 2px rgba(0, 0, 0, 0.25);
+  --shadow-sm: 6px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow: 18px 14px 6px rgba(0, 0, 0, 0.25);
+
+  /* Text shadows */
+  --text-shadow-*: initial;
+  /* text shadow + text borders */
+  --text-shadow-md: 5px 4px 5px rgba(0, 0, 0, 0.25), -2px 0 rgba(0, 0, 0, 0.25),
+    0 2px rgba(0, 0, 0, 0.25), 2px 0 rgba(0, 0, 0, 0.25),
+    0 -2px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="winter"] {
+  /* See https://coolors.co/palettes/popular/winter */
+  --color-primary: #022225;
+  --color-background: #93241b;
+  --color-background-2: #eae3d0;
+  --color-secondary-1: #495d57;
+  --color-secondary-2: #4c383f;
+}
+
+[data-theme="spring"] {
+  /* See https://coolors.co/palettes/popular/spring */
+  --color-one: #f6bd60;
+  --color-two: #f7ede2;
+  --color-three: #f5cac3;
+  --color-four: #84a59d;
+  --color-five: #f28482;
+}
+
+[data-theme="summer"] {
+  /* See https://coolors.co/palettes/popular/summer */
+  --color-primary: #cb997e;
+  --color-background: #e3e8be;
+  --color-background-2: #f8f2cb;
+  --color-secondary-1: #faedcd;
+  --color-secondary-2: #b6c190;
+}
+
+.cartoon-title {
+  font-family: var(--font-cartoon);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.cartoon-title:hover {
+  transform: scale(114%);
 }

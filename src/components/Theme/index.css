@@ -1,0 +1,15 @@
+@keyframes slideInTheme {
+  from {
+    transform: translateY(-4px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+
+.slideInTheme {
+  animation: 500ms slideInTheme ease-out;
+  transition: all;
+}

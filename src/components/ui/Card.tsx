@@ -1,4 +1,4 @@
-import { cn } from "@/utils/classes";
+import { cn } from "@utils/classes";
 import type { PropsWithChildren } from "react";
 
 interface CardProps extends PropsWithChildren {
@@ -9,7 +9,7 @@ function Card({ children, className }: CardProps) {
   return (
     <div
       className={cn(
-        "px-8 py-12 border border-gray-400 rounded-3xl shadow-lg",
+        "px-12 py-14 border-4 rounded-xl border-primary shadow shadow-primary/60 card relative bg-background-2",
         className
       )}
     >
