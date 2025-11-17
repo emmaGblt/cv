@@ -2,21 +2,20 @@ import { PresentationCard } from "@components/Presentation";
 import CardWithTabs from "@components/ui/CardWithTabs";
 import AboutMeContent from "@components/AboutMe/AboutMeCard";
 import { useState } from "react";
-import type { TSeason } from "@/types";
-import { SeasonContext } from "@contexts/SeasonContext";
-import { SeasonButton } from "@components/Season";
+import type { TTheme } from "@/types";
+import { ThemeContext } from "@/contexts/ThemeContext";
+import { ThemeButton } from "@/components/Theme";
 
 function App() {
-  const [currentSeason, setCurrentSeason] = useState<TSeason>("autumn");
-  console.log("currentSeason", currentSeason);
+  const [currentTheme, setCurrentTheme] = useState<TTheme>("cartoon");
 
   return (
-    <SeasonContext value={currentSeason}>
+    <ThemeContext value={currentTheme}>
       <div
-        data-theme={currentSeason}
-        className="py-24 h-dvh px-36 grid grid-cols-[2fr_5fr] gap-x-6 relative text-primary bg-background/90"
+        data-theme={currentTheme}
+        className="py-24 px-36 min-h-dvh grid grid-cols-[2fr_5fr] gap-x-6 relative text-primary bg-background/90"
       >
-        <SeasonButton updateSeason={setCurrentSeason} />
+        <ThemeButton updateTheme={setCurrentTheme} />
         <PresentationCard />
         <CardWithTabs
           defaultValue="about-me"
@@ -39,7 +38,7 @@ function App() {
           ]}
         />
       </div>
-    </SeasonContext>
+    </ThemeContext>
   );
 }
 

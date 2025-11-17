@@ -1,4 +1,4 @@
-@keyframes slideInSeason {
+@keyframes slideInTheme {
   from {
     transform: translateY(-4px);
     opacity: 0%;
@@ -9,7 +9,7 @@
   }
 }
 
-.slideInSeason {
-  animation: 500ms slideInSeason ease-out;
+.slideInTheme {
+  animation: 500ms slideInTheme ease-out;
   transition: all;
 }

@@ -72,13 +72,13 @@
   /* Shadows */
   --shadow-*: initial;
   --shadow-xs: 3px 2px 2px rgba(0, 0, 0, 0.25);
-  --shadow-sm: 6px 4px 4px rgba(0, 0, 0, 0.25);
-  --shadow: 18px 14px 6px rgba(0, 0, 0, 0.25);
+  --shadow-sm: 6px 4px 2px rgba(0, 0, 0, 0.25);
+  --shadow: 18px 14px 2px rgba(0, 0, 0, 0.25);
 
   /* Text shadows */
   --text-shadow-*: initial;
   /* text shadow + text borders */
-  --text-shadow-md: 5px 4px 5px rgba(0, 0, 0, 0.25), -2px 0 rgba(0, 0, 0, 0.25),
+  --text-shadow-md: 5px 4px 3px rgba(0, 0, 0, 0.25), -2px 0 rgba(0, 0, 0, 0.25),
     0 2px rgba(0, 0, 0, 0.25), 2px 0 rgba(0, 0, 0, 0.25),
     0 -2px rgba(0, 0, 0, 0.25);
 }
