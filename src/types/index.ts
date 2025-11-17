@@ -1,1 +1,1 @@
-export type * from "./season";
+export type * from "./themes";
