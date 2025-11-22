@@ -15,17 +15,19 @@ function PresentationListItem({
   className,
 }: PresentationListItemProps) {
   return (
-    <li className="grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-4 text-left">
+    <li className="grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-4 text-left cartoon:text-primary neo:text-secondary-2">
       <div
         className={cn(
-          "p-3 col-start-1 row-span-2 border-3 border-primary bg-light rounded-xl shadow-xs shadow-primary/80",
+          "p-3 col-start-1 row-span-2 transition-all ease-out duration-1000",
+          "cartoon:border-3 cartoon:border-primary cartoon:bg-light cartoon:rounded-xl cartoon:shadow-xs cartoon:shadow-primary/80",
+          "neo:bg-background neo:rounded-2xl neo:shadow-outer-md neo:border neo:border-background",
           className
         )}
       >
-        <Icon className="size-6 text-primary" />
+        <Icon className="size-6" />
       </div>
       <p className="col-start-2 row-start-1 font-bold">{title}</p>
-      <p className="col-start-2 row-start-2 overflow-hidden text-ellipsis font-semibold">
+      <p className="col-start-2 row-start-2 overflow-hidden text-ellipsis font-semibold neo:text-secondary-1">
         {text}
       </p>
     </li>

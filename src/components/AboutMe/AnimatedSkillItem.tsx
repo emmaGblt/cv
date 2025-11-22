@@ -16,7 +16,7 @@ function AnimatedSkillItem({
   return (
     <li className="shrink-0 grow-0 flex-1">
       <a href={href} target="_blank" rel="noopener noreferrer">
-        <div className="size-32 holographic-card">
+        <div className="size-32 holographic-card neo:shadow-outer-md">
           <span className="py-1 px-2.5 text-sm font-bold card-name">
             {name}
           </span>

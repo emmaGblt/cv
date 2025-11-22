@@ -36,8 +36,9 @@ function ThemeButton({ updateTheme }: ThemeButtonProps) {
       type="button"
       onClick={onThemeChange}
       className={cn(
-        "z-10 cursor-pointer fixed top-6 right-8 min-w-[120px]",
-        "bg-background-2 border-3 border-primary py-2.5 px-4.5 font-semibold shadow-sm shadow-primary/70 rounded-xl"
+        "z-10 cursor-pointer fixed top-6 right-8 min-w-[120px] py-2.5 px-4.5 transition-all duration-1000 ease-out",
+        "cartoon:bg-background-2 cartoon:border-3 cartoon:border-primary cartoon:font-semibold cartoon:shadow-sm cartoon:shadow-primary/70 cartoon:rounded-xl",
+        "neo:shadow-outer-md neo:active:shadow-inner-md rounded-4xl"
       )}
     >
       <span

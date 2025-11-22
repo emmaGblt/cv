@@ -19,18 +19,22 @@ type CardWithTabsProps = {
 
 function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
   return (
-    <Card className="relative">
+    <Card className="relative overflow-x-hidden">
       <BaseUiTabs.Root defaultValue={defaultValue} orientation="horizontal">
         <BaseUiTabs.List
           className={cn(
-            "absolute border-4 border-t-0 border-r-0 right-0 top-0 px-10 py-4 flex gap-x-8 rounded-bl-xl",
-            "bg-background/40 border-primary"
+            "absolute grid grid-cols-3 transition-all duration-1000 ease-out",
+            "cartoon:bg-background/40 cartoon:border-primary cartoon:border-4 cartoon:border-t-0 cartoon:border-r-0 rounded-bl-xl cartoon:right-0 cartoon:top-0",
+            "neo:rounded-2xl neo:shadow-outer-md neo:top-4 neo:right-4 neo:border neo:border-background"
           )}
         >
           {tabs.map((tab) => (
             <BaseUiTabs.Tab
               value={tab.value}
-              className="font-bold cursor-pointer text-secondary-2 hover:text-primary data-selected:text-primary"
+              className={cn(
+                "font-bold cursor-pointer px-5 py-4 text-secondary-2 hover:text-primary data-selected:text-primary cartoon:rounded-xl",
+                "neo:data-selected:shadow-inner-md neo:rounded-2xl neo:data-selected:text-secondary-1 neo:transition-all neo:duration-300 neo:ease-out"
+              )}
             >
               {tab.title}
             </BaseUiTabs.Tab>
