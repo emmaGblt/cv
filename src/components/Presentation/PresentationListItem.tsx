@@ -19,7 +19,7 @@ function PresentationListItem({
       <div
         className={cn(
           "p-3 col-start-1 row-span-2 transition-all ease-out duration-1000",
-          "cartoon:border-3 cartoon:border-primary cartoon:bg-light cartoon:rounded-xl cartoon:shadow-xs cartoon:shadow-primary/80",
+          "cartoon:border-2 cartoon:border-primary cartoon:bg-light cartoon:rounded-md cartoon:shadow-xs cartoon:shadow-primary/80",
           "neo:bg-background neo:rounded-2xl neo:shadow-outer-md neo:border neo:border-background",
           className
         )}

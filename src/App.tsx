@@ -16,7 +16,7 @@ function App() {
         <div
           className={cn(
             "py-24 px-36 min-h-dvh grid grid-cols-[2fr_5fr] gap-x-6 relative",
-            "cartoon:text-primary cartoon:bg-background/90",
+            "cartoon:text-primary cartoon:bg-background",
             "neo:text-black/90 neo:bg-background"
           )}
         >

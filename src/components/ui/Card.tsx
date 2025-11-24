@@ -10,7 +10,7 @@ function Card({ children, className }: CardProps) {
     <div
       className={cn(
         "px-12 py-14 relative transition-all duration-1000 ease-out",
-        "cartoon:border-4 cartoon:rounded-xl cartoon:border-primary cartoon:shadow-md cartoon:shadow-primary/60 cartoon:bg-background-2",
+        "cartoon:border-4 cartoon:rounded-md cartoon:border-primary cartoon:shadow-md cartoon:shadow-primary/80 cartoon:bg-background-2",
         "neo:rounded-4xl neo:border neo:border-background neo:shadow-outer-lg neo:bg-background",
         className
       )}

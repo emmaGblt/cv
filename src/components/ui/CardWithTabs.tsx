@@ -24,7 +24,7 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
         <BaseUiTabs.List
           className={cn(
             "absolute grid grid-cols-3 transition-all duration-1000 ease-out",
-            "cartoon:bg-background/40 cartoon:border-primary cartoon:border-4 cartoon:border-t-0 cartoon:border-r-0 rounded-bl-xl cartoon:right-0 cartoon:top-0",
+            "cartoon:bg-background/40 cartoon:border-primary cartoon:border-4 cartoon:rounded-bl-md cartoon:-right-1 cartoon:-top-1",
             "neo:rounded-2xl neo:shadow-outer-md neo:top-4 neo:right-4 neo:border neo:border-background"
           )}
         >
@@ -32,7 +32,7 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
             <BaseUiTabs.Tab
               value={tab.value}
               className={cn(
-                "font-bold cursor-pointer px-5 py-4 text-secondary-2 hover:text-primary data-selected:text-primary cartoon:rounded-xl",
+                "font-bold cursor-pointer px-5 py-4 text-secondary-2 hover:text-primary data-selected:text-primary cartoon:rounded-md",
                 "neo:data-selected:shadow-inner-md neo:rounded-2xl neo:data-selected:text-secondary-1 neo:transition-all neo:duration-300 neo:ease-out"
               )}
             >

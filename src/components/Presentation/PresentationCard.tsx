@@ -50,12 +50,17 @@ function PresentationCard() {
             />
           </ul>
           <a
-            className="cartoon:mt-7 neo:mt-9 inline-block neo:p-4 neo:rounded-full neo:shadow-outer-md neo:active:shadow-inner-md"
+            className={cn(
+              "pushButton inline-flex gap-x-1.5 items-center justify-center",
+              "cartoon:mt-7 cartoon:bg-secondary-2 cartoon:border-2 cartoon:border-primary cartoon:font-semibold cartoon:shadow-sm cartoon:shadow-primary/80 cartoon:rounded-md cartoon:py-2 cartoon:px-2.5",
+              "neo:mt-9 neo:p-4 neo:rounded-full neo:shadow-outer-md neo:active:shadow-inner-md"
+            )}
             href="https://www.linkedin.com/in/emma-guilbault-078588183/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedInLogo className="cartoon:fill-primary neo:fill-secondary-2 size-6" />
+            <LinkedInLogo className="cartoon:fill-primary neo:fill-secondary-2 neo:size-6 cartoon:size-4" />
+            <span className="neo:hidden text-sm font-semibold">Linkedin</span>
           </a>
         </div>
       </div>
