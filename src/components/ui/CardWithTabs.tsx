@@ -1,7 +1,9 @@
 import { Tabs as BaseUiTabs } from "@base-ui-components/react/tabs";
-import type { ComponentProps } from "react";
+import { use, type ComponentProps } from "react";
 import Card from "./Card";
 import { cn } from "@/utils/classes";
+import Divider from "./Divider";
+import { ThemeContext } from "@/contexts/ThemeContext";
 
 type BaseUiTabProps = ComponentProps<typeof BaseUiTabs.Tab>;
 type BaseUiRootProps = ComponentProps<typeof BaseUiTabs.Root>;
@@ -18,6 +20,8 @@ type CardWithTabsProps = {
 };
 
 function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
+  const theme = use(ThemeContext);
+
   return (
     <Card className="relative overflow-x-hidden">
       <BaseUiTabs.Root defaultValue={defaultValue} orientation="horizontal">
@@ -41,7 +45,16 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
           ))}
         </BaseUiTabs.List>
         {tabs.map((tab) => (
-          <BaseUiTabs.Panel value={tab.value}>{tab.content}</BaseUiTabs.Panel>
+          <BaseUiTabs.Panel value={tab.value}>
+            <h2 className="text-3xl mb-4 cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary max-w-fit neo:font-bold">
+              {tab.title}
+            </h2>
+            <Divider
+              className="w-1/8 mb-8"
+              type={theme === "cartoon" ? "thick" : "thin"}
+            />
+            {tab.content}
+          </BaseUiTabs.Panel>
         ))}
       </BaseUiTabs.Root>
     </Card>

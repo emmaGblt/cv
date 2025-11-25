@@ -1,21 +1,9 @@
-import { use } from "react";
-import Divider from "../ui/Divider";
 import SkillsList from "./SkillsList";
 import "./index.css";
-import { ThemeContext } from "@/contexts/ThemeContext";
 
 function AboutMeContent() {
-  const theme = use(ThemeContext);
-
   return (
     <div>
-      <h2 className="text-3xl mb-4 cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary max-w-fit neo:font-bold">
-        À propos de moi
-      </h2>
-      <Divider
-        className="w-1/8 mb-8"
-        type={theme === "cartoon" ? "thick" : "thin"}
-      />
       <div className="flex flex-col gap-y-4 text-justify font-semibold">
         <p>
           Développeuse full stack depuis 5 ans, je travaille sur des{" "}

@@ -1,0 +1,22 @@
+.experience-list-item:not(:last-child)::before {
+  content: "";
+  background: var(--color-primary);
+  width: 1px;
+  position: absolute;
+  top: -15px;
+  left: 22px;
+  height: calc(100% + 50px);
+  z-index: 0;
+}
+
+.experience-list-item::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 19.5px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.4) /* --color-secondary-2 */;
+}

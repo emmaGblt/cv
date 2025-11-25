@@ -6,6 +6,7 @@ import type { TTheme } from "@/types";
 import { ThemeContext } from "@/contexts/ThemeContext";
 import { ThemeButton } from "@/components/Theme";
 import { cn } from "./utils/classes";
+import { CurriculumVitaeCard } from "./components/CurriculumVitae";
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState<TTheme>("cartoon");
@@ -33,7 +34,7 @@ function App() {
               {
                 value: "resume",
                 title: "Mon CV",
-                content: <div>Work in progress here!</div>,
+                content: <CurriculumVitaeCard />,
               },
               {
                 value: "other",
