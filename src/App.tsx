@@ -9,7 +9,7 @@ import { cn } from "./utils/classes";
 import { CurriculumVitaeCard } from "./components/CurriculumVitae";
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState<TTheme>("cartoon");
+  const [currentTheme, setCurrentTheme] = useState<TTheme>("neomorphism");
 
   return (
     <ThemeContext value={currentTheme}>
