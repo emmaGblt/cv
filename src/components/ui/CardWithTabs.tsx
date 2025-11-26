@@ -34,6 +34,7 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
         >
           {tabs.map((tab) => (
             <BaseUiTabs.Tab
+              key={`tab-${tab.value}`}
               value={tab.value}
               className={cn(
                 "font-bold transition-all duration-300 ease-out cursor-pointer px-5 py-4 text-secondary-2 cartoon:hover:text-primary data-selected:text-primary cartoon:rounded-md",
@@ -45,7 +46,7 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
           ))}
         </BaseUiTabs.List>
         {tabs.map((tab) => (
-          <BaseUiTabs.Panel value={tab.value}>
+          <BaseUiTabs.Panel value={tab.value} key={`panel-${tab.value}`}>
             <h2 className="text-3xl mb-4 cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary max-w-fit neo:font-bold">
               {tab.title}
             </h2>

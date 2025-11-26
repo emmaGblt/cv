@@ -37,8 +37,10 @@ function Experience({
         </p>
         {descriptions && descriptions.length > 0 && (
           <ul className="ml-4 cartoon:text-primary/70 neo:text-black/70">
-            {descriptions.map((description) => (
-              <li className="list-disc">{description}</li>
+            {descriptions.map((description, index) => (
+              <li key={`description-${index + 1}`} className="list-disc">
+                {description}
+              </li>
             ))}
           </ul>
         )}

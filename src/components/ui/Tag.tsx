@@ -1,14 +1,15 @@
 import { cn } from "@/utils/classes";
 
-type TypeProps = { text: string };
+type TypeProps = { text: string; className?: string };
 
-function Tag({ text }: TypeProps) {
+function Tag({ text, className }: TypeProps) {
   return (
     <div
       className={cn(
-        "px-3 py-1.5 inline-block font-semibold text-sm ",
+        "px-1.5 py-0.5 md:px-3 md:py-1.5 inline-block font-semibold text-xs md:text-sm text-center",
         "cartoon:border-2 cartoon:rounded-md cartoon:shadow-xs cartoon:bg-light cartoon:text-primary",
-        "neo:rounded-3xl neo:bg-background-2/50 neo:text-black neo:uppercase"
+        "neo:rounded-3xl neo:bg-background-2/50 neo:text-black neo:uppercase",
+        className
       )}
     >
       {text}
