@@ -16,7 +16,8 @@ function Experiences({ title, experiences, Icon }: ExperiencesProps) {
         <span
           className={cn(
             "p-2.5 transition-all ease-out duration-1000 z-10",
-            "cartoon:border-2 cartoon:border-primary cartoon:rounded-md cartoon:bg-light cartoon:shadow-sm cartoon:shadow-primary/80"
+            "cartoon:border-2 cartoon:border-primary cartoon:rounded-md cartoon:bg-light cartoon:shadow-sm cartoon:shadow-primary/80",
+            "neo:bg-background neo:rounded-2xl neo:shadow-outer-md neo:border neo:border-background"
           )}
         >
           <Icon className="size-5" />

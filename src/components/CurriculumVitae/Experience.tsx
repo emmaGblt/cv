@@ -31,12 +31,12 @@ function Experience({
           {organization}
           <span className="text-sm italic">&nbsp;-&nbsp;{location}</span>
         </div>
-        <p className="cartoon:text-secondary-2 text-sm mb-1">
+        <p className="cartoon:text-secondary-2 neo:text-secondary-1 text-sm mb-1">
           {formattedStartDate}
           {formattedEndDate ? ` - ${formattedEndDate}` : ""}
         </p>
         {descriptions && descriptions.length > 0 && (
-          <ul className="ml-4 cartoon:text-primary/70">
+          <ul className="ml-4 cartoon:text-primary/70 neo:text-black/70">
             {descriptions.map((description) => (
               <li className="list-disc">{description}</li>
             ))}

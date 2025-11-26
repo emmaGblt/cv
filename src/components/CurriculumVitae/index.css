@@ -1,6 +1,5 @@
 .experience-list-item:not(:last-child)::before {
   content: "";
-  background: var(--color-primary);
   width: 1px;
   position: absolute;
   top: -15px;
@@ -17,6 +16,28 @@
   height: 6px;
   width: 6px;
   border-radius: 50%;
-  background-color: var(--color-primary);
-  box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.4) /* --color-secondary-2 */;
+}
+
+[data-theme="cartoon"] {
+  .experience-list-item:not(:last-child)::before {
+    background: var(--color-primary);
+  }
+
+  .experience-list-item::after {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.4) /* --color-secondary-2 */;
+  }
+}
+
+[data-theme="neomorphism"] {
+  .experience-list-item:not(:last-child)::before {
+    width: 2px;
+    box-shadow: inset -1px -1px 1px 0 rgba(255, 255, 255, 0.8),
+      inset 1px 1px 1px 0 var(--color-primary);
+  }
+
+  .experience-list-item::after {
+    background-color: rgba(38, 70, 83, 0.4) /* --color-primary */;
+    box-shadow: 0 0 0 4px var(--color-primary);
+  }
 }
