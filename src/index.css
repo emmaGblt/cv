@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 @import "tailwindcss";
 
+@custom-variant neo (&:where([data-theme="neomorphism"] *));
+@custom-variant cartoon (&:where([data-theme="cartoon"] *));
+
 @theme {
+  /* Font families*/
+  --font-cartoon-title: "Luckiest Guy", cursive;
+  --font-neo: "Montserrat", sans-serif;
+  --font-cartoon: "Lexend", sans-serif;
+
+  /* Font weights */
   --font-weight-*: initial;
   --font-weight-normal: 400;
   --font-weight-semibold: 500;
@@ -24,6 +36,17 @@
   --text-4xl: clamp(1.5768rem, 1.1773rem + 1.6387vi, 2.4883rem);
   --text-4xl--line-height: 1.5;
 
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-primary: #264653;
+  --color-background: #e76f51;
+  --color-background-2: #e9c46a;
+  --color-secondary-1: #f4a261;
+  --color-secondary-2: #2a9d8f;
+  --color-light: #f2e7c4;
+
   /* --spacing-*: initial;
   --spacing-0: 0px;
   --spacing-none: 0px;
@@ -46,11 +69,65 @@
   --radius-xl: clamp(28px, 26.2472px + 0.4494vi, 32px);
   --radius-full: 9999px; */
 
-  /* --shadow-*: initial;
-  --shadow-sm: 0px 2px 3px 0px rgba(59, 46, 129, 0.04);
-  --shadow-md: 0px 1px 8px 0px rgba(59, 46, 129, 0.06);
-  --shadow-lg: 0px 5px 15px 0px rgba(59, 46, 129, 0.08);
-  --shadow-xl: 0px 2px 25px 0px rgba(59, 46, 129, 0.08);
-  --shadow-inner: 0px 0px 5px 0px rgba(59, 46, 129, 0.09) inset;
-  --shadow-none: 0 0 #0000; */
+  /* Shadows */
+  --shadow-*: initial;
+  --shadow-xs: 3px 2px 0 rgba(0, 0, 0, 0.25);
+  --shadow-sm: 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --shadow-md: 15px 12px 0 rgba(100, 100, 100, 0.25);
+
+  --shadow-outer-md: 0.3rem 0.3rem 0.6rem var(--color-primary),
+    -0.2rem -0.2rem 0.5rem var(--color-white);
+  --shadow-outer-lg: -14px -14px 30px var(--color-white),
+    14px 14px 30px var(--color-primary);
+
+  --shadow-inner-sm: inset -1px -1px 1px 0 rgba(255, 255, 255, 0.8),
+    inset 1px 1px 1px 0 var(--color-primary);
+  --shadow-inner-md: inset 0.2rem 0.2rem 0.5rem var(--color-primary),
+    inset -0.2rem -0.2rem 0.5rem var(--color-white);
+
+  /* Text shadows */
+  --text-shadow-*: initial;
+  /* text shadow + text borders */
+  --text-shadow-md: 5px 4px 3px rgba(0, 0, 0, 0.25), -2px 0 rgba(0, 0, 0, 0.25),
+    0 2px rgba(0, 0, 0, 0.25), 2px 0 rgba(0, 0, 0, 0.25),
+    0 -2px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="neomorphism"] {
+  font-family: var(--font-neo);
+
+  /* See https://coolors.co/palettes/popular/winter */
+  --color-black: #2b2e31;
+  --color-primary: #d1d9e6;
+  --color-background: #ecf0f3;
+  --color-background-2: #b7bbbe;
+  --color-secondary-1: #85898b;
+  --color-secondary-2: #565a5c;
+  --color-light: #ffffff;
+}
+
+[data-theme="cartoon"] {
+  font-family: var(--font-cartoon);
+
+  .cartoon-title {
+    font-family: var(--font-cartoon-title) !important;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    color: var(--color-light);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .cartoon-title:hover {
+    transform: scale(114%);
+  }
+
+  .pushButton {
+    transition-property: transform, box-shadow;
+    transition-duration: 100ms;
+  }
+
+  .pushButton:hover {
+    transform: translateX(4px) translateY(4px);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  }
 }

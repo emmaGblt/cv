@@ -1,6 +1,9 @@
 import { Tabs as BaseUiTabs } from "@base-ui-components/react/tabs";
-import type { ComponentProps } from "react";
+import { use, type ComponentProps } from "react";
 import Card from "./Card";
+import { cn } from "@/utils/classes";
+import Divider from "./Divider";
+import { ThemeContext } from "@/contexts/ThemeContext";
 
 type BaseUiTabProps = ComponentProps<typeof BaseUiTabs.Tab>;
 type BaseUiRootProps = ComponentProps<typeof BaseUiTabs.Root>;
@@ -17,21 +20,41 @@ type CardWithTabsProps = {
 };
 
 function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
+  const theme = use(ThemeContext);
+
   return (
-    <Card className="relative">
+    <Card className="relative overflow-x-hidden">
       <BaseUiTabs.Root defaultValue={defaultValue} orientation="horizontal">
-        <BaseUiTabs.List className="absolute border border-t-0 border-gray-400 right-0 top-0 px-10 py-4 flex gap-x-8 bg-amber-300 rounded-tr-3xl rounded-bl-3xl">
+        <BaseUiTabs.List
+          className={cn(
+            "absolute grid grid-cols-3 transition-all duration-1000 ease-out",
+            "cartoon:bg-background/40 cartoon:border-primary cartoon:border-4 cartoon:rounded-bl-md cartoon:-right-1 cartoon:-top-1",
+            "neo:rounded-2xl neo:shadow-outer-md neo:top-4 neo:right-4 neo:border neo:border-background"
+          )}
+        >
           {tabs.map((tab) => (
             <BaseUiTabs.Tab
               value={tab.value}
-              className="font-semibold cursor-pointer text-gray-500 hover:text-gray-800 active:text-gray-800 data-selected:text-amber-800"
+              className={cn(
+                "font-bold cursor-pointer px-5 py-4 text-secondary-2 hover:text-primary data-selected:text-primary cartoon:rounded-md",
+                "neo:data-selected:shadow-inner-md neo:rounded-2xl neo:data-selected:text-secondary-1 neo:transition-all neo:duration-300 neo:ease-out"
+              )}
             >
               {tab.title}
             </BaseUiTabs.Tab>
           ))}
         </BaseUiTabs.List>
         {tabs.map((tab) => (
-          <BaseUiTabs.Panel value={tab.value}>{tab.content}</BaseUiTabs.Panel>
+          <BaseUiTabs.Panel value={tab.value}>
+            <h2 className="text-3xl mb-4 cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary max-w-fit neo:font-bold">
+              {tab.title}
+            </h2>
+            <Divider
+              className="w-1/8 mb-8"
+              type={theme === "cartoon" ? "thick" : "thin"}
+            />
+            {tab.content}
+          </BaseUiTabs.Panel>
         ))}
       </BaseUiTabs.Root>
     </Card>

@@ -1,74 +1,121 @@
 .holographic-card {
-  background: var(--color-gray-300);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius-4xl);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-out;
+  overflow: visible;
 }
 
-.holographic-card::before {
-  content: "";
+.card-name {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    0deg,
-    transparent,
-    transparent 30%,
-    var(--color-amber-400)
-  );
-  transform: rotate(-45deg);
-  transition: all 0.5s ease;
-  opacity: 0;
-  z-index: 2;
+  top: -12px;
+  right: -8px;
 }
-
-/* -- Hologrphic card -- */
 
 .holographic-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px var(--color-amber-400);
+  transform: scale(118%);
 }
 
-.holographic-card:hover::before {
-  opacity: 1;
-  transform: rotate(-45deg) translateY(100%);
-}
-
-/* -- Holographic cards scrollbar -- */
-.holographic-cards-scrollbar {
-  --scrollbar-color-track: var(--color-gray-600);
-  --scrollbar-color-thumb: var(--color-amber-400);
-
-  @supports not selector(::-webkit-scrollbar) {
-    scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
-    scrollbar-width: auto;
-    scrollbar-gutter: auto;
+[data-theme="cartoon"] {
+  .holographic-card {
+    background-color: var(--color-secondary-1);
+    border-color: var(--color-primary);
+    border-width: 3px;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-xl);
   }
 
-  @supports selector(::-webkit-scrollbar) {
-    ::-webkit-scrollbar {
-      height: 0.4em;
+  .card-name {
+    border-width: 2px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-background-2);
+  }
+
+  .holographic-cards-scrollbar {
+    --scrollbar-color-track: var(--color-primary);
+    --scrollbar-color-thumb: var(--color-secondary-2);
+
+    @supports not selector(::-webkit-scrollbar) {
+      scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+      scrollbar-width: auto;
+      scrollbar-gutter: auto;
     }
 
-    ::-webkit-scrollbar-track {
-      background-color: var(--scrollbar-color-track);
-      border-radius: var(--radius-4xl);
-      margin-inline: 12em;
+    @supports selector(::-webkit-scrollbar) {
+      ::-webkit-scrollbar {
+        height: 0.4em;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: var(--scrollbar-color-track);
+        border-radius: var(--radius-4xl);
+        margin-inline: 12em;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-color-thumb);
+        border-radius: var(--radius-4xl);
+      }
+    }
+  }
+}
+
+[data-theme="neomorphism"] {
+  .holographic-card {
+    background-color: var(--color-background);
+    border-color: var(--color-background);
+    border-width: 1px;
+    border-radius: var(--radius-2xl);
+  }
+
+  .card-name {
+    --card-name-color: color-mix(
+      in oklab,
+      var(--color-background-2) 50%,
+      transparent
+    );
+
+    border-width: 1px;
+    border-radius: var(--radius-2xl);
+    background-color: var(--card-name-color);
+    border-color: var(--card-name-color);
+  }
+
+  .holographic-cards-scrollbar {
+    --scrollbar-color-track: var(--color-primary);
+    --scrollbar-color-thumb: var(--color-secondary-2);
+    --scrollbar-track-inner-shadow: inset 0.2rem 0.2rem 0.5rem
+        var(--color-primary),
+      inset -0.2rem -0.2rem 0.5rem var(--color-white);
+
+    @supports not selector(::-webkit-scrollbar) {
+      scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+      scrollbar-width: auto;
+      scrollbar-gutter: auto;
     }
 
-    ::-webkit-scrollbar-thumb {
-      background-color: var(--scrollbar-color-thumb);
-      border-radius: var(--radius-4xl);
-    }
+    @supports selector(::-webkit-scrollbar) {
+      ::-webkit-scrollbar {
+        height: 0.4em;
+      }
 
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: var(--color-amber-600);
+      ::-webkit-scrollbar-track {
+        background-color: var(--scrollbar-color-track);
+        border-radius: var(--radius-4xl);
+        margin-inline: 12em;
+        box-shadow: var(--scrollbar-track-inner-shadow);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+          -1deg,
+          var(--scrollbar-color-thumb),
+          var(--color-background-2)
+        );
+        border-radius: var(--radius-4xl);
+      }
     }
   }
 }
