@@ -1,13 +1,15 @@
+import { BookOpen, Briefcase } from "lucide-react";
 import Experiences from "./Experiences";
 
 function CurriculumVitaeCard() {
   return (
-    <div>
+    <div className="flex flex-col gap-y-6">
       <Experiences
         title="Expériences"
+        Icon={Briefcase}
         experiences={[
           {
-            job: "Développeuse font-end",
+            title: "Développeuse font-end",
             organization: "Carbo",
             location: "Normandie (remote)",
             startDate: new Date("2024-08-01"),
@@ -18,13 +20,12 @@ function CurriculumVitaeCard() {
               "Participer avec le Produit et le Design aux réflexions et aux choix concernant les refontes et migrations de pages",
               "Migrer les interfaces historiques en utilisant notre Design System, notre librairie de composants et les technologies React / Typescript / React router",
               "Assurer la stabilité de ces nouvelles pages par l'écriture de tests systématiques",
-              "Travailler en collaboration avec un.e développeur.se back-end",
               "Réaliser des développements front-end sur l'application historique (Ruby on Rails)",
               "Réaliser des développements full-stack (Ruby on Rails / React)",
             ],
           },
           {
-            job: "Développeuse full-stack (Python / React)",
+            title: "Développeuse full-stack (Python / React)",
             organization: "Carbo",
             location: "Normandie (remote)",
             startDate: new Date("2023-07-10"),
@@ -39,11 +40,71 @@ function CurriculumVitaeCard() {
             ],
           },
           {
-            job: "Développeuse full-stack (Python / React)",
+            title: "Développeuse full-stack (Python / React)",
             organization: "Doqboard",
             location: "Normandie (remote)",
             startDate: new Date("2021-02-01"),
             endDate: new Date("2023-07-01"),
+            descriptions: [
+              "Outil d'import de données depuis un fichier .csv",
+              "Fonctionnalité de suivi des données manquantes au sein d'un questionnaire",
+              "Fonctionnalité de contrôle de la validité des données au sein d'un questionnaire",
+              "Fonctionnalité de qualification des données manquantes au sein d'un questionnaire",
+              "Espace de communauté permettant de mettre en avant certains types de compte",
+            ],
+          },
+        ]}
+      />
+      <Experiences
+        title="Formation"
+        Icon={BookOpen}
+        experiences={[
+          {
+            title: "Département Génie Mathématiques",
+            organization: "INSA Rouen Normandie",
+            location: "Saint-Étienne-du-Rouvray (Normandie)",
+            startDate: new Date("2019-09-01"),
+            endDate: new Date("2020-09-01"),
+            showOnlyDateYear: true,
+            descriptions: [
+              "Déléguée de promotion",
+              "Bourse d'excellence de la Fondation Francis Bouygues",
+            ],
+          },
+          {
+            title: "Cycle préparatoire ingénieur",
+            organization: "INSA Rouen Normandie",
+            location: "Saint-Étienne-du-Rouvray (Normandie)",
+            startDate: new Date("2017-09-01"),
+            endDate: new Date("2019-09-01"),
+            showOnlyDateYear: true,
+            descriptions: [
+              "Section Internationale Bilingue",
+              "Section Théâtres-Études",
+              "Bourse d'excellence de la Fondation Francis Bouygues",
+              "Bourse Lumières des Cités du CRIJ Normandie Rouen",
+              "Bourse au mérite du CROUS",
+            ],
+          },
+          {
+            title: "Baccalauréat SVT",
+            organization: "Lycée Jehan Ango",
+            location: "Dieppe (Normandie)",
+            startDate: new Date("2014-09-01"),
+            endDate: new Date("2027-09-01"),
+            descriptions: [
+              "Niveau : Mention Très Bien",
+              "Spécialité Mathématiques",
+              "Mention européenne en Espagnol",
+            ],
+            showOnlyDateYear: true,
+          },
+          {
+            title: "Diploma de español como lengua extranjera nivel B1",
+            organization: "Instituto Cervantes",
+            location: "Dieppe (Normandie)",
+            startDate: new Date("2015-09-01"),
+            showOnlyDateYear: true,
           },
         ]}
       />
