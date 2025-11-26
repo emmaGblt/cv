@@ -15,7 +15,7 @@ function PresentationCard() {
           <img
             src={me}
             className={cn(
-              "xl:w-1/2 md:w-32 w-24 aspect-square xl:mb-6 mx-auto my-auto",
+              "xl:w-1/2 md:w-32 w-20 sm:w-24 aspect-square xl:mb-6 mx-auto my-auto",
               "cartoon:rounded-4xl cartoon:border cartoon:border-transparent",
               "neo:rounded-full neo:border-5 neo:border-white"
             )}
@@ -25,7 +25,8 @@ function PresentationCard() {
             <h1 className="mb-1.5 md:mb-3 xl:text-center text-2xl md:text-4xl cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold">
               Emma Guilbault
             </h1>
-            <Tag text="Développeuse full stack" />
+            <Tag text="Développeuse full stack" className="hidden sm:block" />
+            <Tag text="Dev. full stack" className="sm:hidden block" />
           </div>
         </div>
         <div className="w-full 2xl:w-[90%] xl:text-center">

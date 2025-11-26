@@ -3,7 +3,7 @@ import Experiences from "./Experiences";
 
 function CurriculumVitaeCard() {
   return (
-    <div className="flex flex-col gap-y-6">
+    <div className="flex flex-col gap-4 md:gap-y-6">
       <Experiences
         title="Expériences"
         Icon={Briefcase}

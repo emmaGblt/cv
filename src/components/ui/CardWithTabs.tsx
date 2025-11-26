@@ -51,7 +51,7 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
               {tab.title}
             </h2>
             <Divider
-              className="w-1/6 xl:w-1/8 mb-5 md:mb-8"
+              className="w-1/6 xl:w-1/8 mb-8"
               type={theme === "cartoon" ? "thick" : "thin"}
             />
             {tab.content}

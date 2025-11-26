@@ -25,8 +25,8 @@ function Experience({
       key={`${title} - ${organization}`}
       className="relative experience-list-item"
     >
-      <div className="ml-14.5">
-        <h4 className="font-bold text-lg">{title}</h4>
+      <div className="ml-9 md:ml-14.5">
+        <h4 className="font-bold md:text-lg">{title}</h4>
         <div className="cartoon:text-primary/80">
           {organization}
           <span className="text-sm italic">&nbsp;-&nbsp;{location}</span>
@@ -36,7 +36,7 @@ function Experience({
           {formattedEndDate ? ` - ${formattedEndDate}` : ""}
         </p>
         {descriptions && descriptions.length > 0 && (
-          <ul className="ml-4 cartoon:text-primary/70 neo:text-black/70">
+          <ul className="ml-4 cartoon:text-primary/70 neo:text-black/70 text-sm md:text-base">
             {descriptions.map((description, index) => (
               <li key={`description-${index + 1}`} className="list-disc">
                 {description}

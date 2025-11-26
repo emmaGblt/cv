@@ -2,8 +2,6 @@
   content: "";
   width: 1px;
   position: absolute;
-  top: -15px;
-  left: 22px;
   height: calc(100% + 50px);
   z-index: 0;
 }
@@ -11,11 +9,48 @@
 .experience-list-item::after {
   content: "";
   position: absolute;
-  top: 11px;
-  left: 19.5px;
+  top: 7px;
+  left: 11.5px;
   height: 6px;
   width: 6px;
   border-radius: 50%;
+
+  @media (width >= 48rem /* --breakpoint-md */) {
+    top: 10px;
+    left: 19.5px;
+  }
+}
+
+[data-theme="cartoon"] {
+  .experience-list-item:not(:last-child)::before {
+    left: 14px;
+    top: -22px;
+
+    @media (width >= 48rem /* --breakpoint-md */) {
+      left: 22px;
+      top: -15px;
+    }
+  }
+}
+
+[data-theme="neomorphism"] {
+  .experience-list-item:not(:last-child)::before {
+    left: 12px;
+    top: -22px;
+
+    @media (width >= 48rem /* --breakpoint-md */) {
+      left: 20px;
+      top: -15px;
+    }
+  }
+
+  .experience-list-item::after {
+    left: 9.5px;
+
+    @media (width >= 48rem /* --breakpoint-md */) {
+      left: 17.5px;
+    }
+  }
 }
 
 [data-theme="cartoon"] {
