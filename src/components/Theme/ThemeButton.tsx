@@ -1,7 +1,7 @@
 import { ThemeContext } from "@/contexts/ThemeContext";
 import type { TTheme } from "@/types";
 import { cn } from "@utils/classes";
-import { Flower2, Snowflake, type LucideIcon } from "lucide-react";
+import { Bubbles, PartyPopper, type LucideIcon } from "lucide-react";
 import { use } from "react";
 import { getNextTheme } from "@/utils/themes";
 import "./index.css";
@@ -18,8 +18,8 @@ const THEME_NAMES: Record<TTheme, string> = {
 };
 
 const THEME_ICONS: Record<TTheme, LucideIcon> = {
-  cartoon: Snowflake,
-  neomorphism: Flower2,
+  cartoon: PartyPopper,
+  neomorphism: Bubbles,
 };
 
 function ThemeButton({ updateTheme }: ThemeButtonProps) {
