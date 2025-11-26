@@ -51,7 +51,7 @@ function PresentationCard() {
           </ul>
           <a
             className={cn(
-              "pushButton inline-flex gap-x-1.5 items-center justify-center",
+              "group pushButton inline-flex gap-x-1.5 items-center justify-center",
               "cartoon:mt-7 cartoon:bg-secondary-2 cartoon:border-2 cartoon:border-primary cartoon:font-semibold cartoon:shadow-sm cartoon:shadow-primary/80 cartoon:rounded-md cartoon:py-2 cartoon:px-2.5",
               "neo:mt-9 neo:p-4 neo:rounded-full neo:shadow-outer-md neo:active:shadow-inner-md"
             )}
@@ -59,8 +59,10 @@ function PresentationCard() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedInLogo className="cartoon:fill-primary neo:fill-secondary-2 neo:size-6 cartoon:size-4" />
-            <span className="neo:hidden text-sm font-semibold">Linkedin</span>
+            <LinkedInLogo className="cartoon:fill-primary neo:fill-secondary-2 neo:size-6 cartoon:size-4 neo:group-hover:fill-black/50" />
+            <span className="neo:hidden text-sm font-semibold neo:group-hover:text-black/50">
+              Linkedin
+            </span>
           </a>
         </div>
       </div>

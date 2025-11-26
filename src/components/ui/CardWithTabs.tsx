@@ -36,8 +36,8 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
             <BaseUiTabs.Tab
               value={tab.value}
               className={cn(
-                "font-bold cursor-pointer px-5 py-4 text-secondary-2 hover:text-primary data-selected:text-primary cartoon:rounded-md",
-                "neo:data-selected:shadow-inner-md neo:rounded-2xl neo:data-selected:text-secondary-1 neo:transition-all neo:duration-300 neo:ease-out"
+                "font-bold transition-all duration-300 ease-out cursor-pointer px-5 py-4 text-secondary-2 cartoon:hover:text-primary data-selected:text-primary cartoon:rounded-md",
+                "neo:data-selected:shadow-inner-md neo:rounded-2xl neo:data-selected:text-secondary-1 neo:hover:text-black/50"
               )}
             >
               {tab.title}
