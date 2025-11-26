@@ -15,7 +15,7 @@ function PresentationListItem({
   className,
 }: PresentationListItemProps) {
   return (
-    <li className="grid grid-cols-[auto_1fr] text-sm md:text-base grid-rows-2 items-center gap-x-4 text-left cartoon:text-primary neo:text-secondary-2">
+    <li className="grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-4 text-left cartoon:text-primary neo:text-secondary-2">
       <div
         className={cn(
           "p-2.5 md:p-3 col-start-1 row-span-2 transition-all ease-out duration-1000",

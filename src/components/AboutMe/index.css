@@ -8,14 +8,44 @@
   overflow: visible;
 }
 
+.holographic-card:hover {
+  transform: scale(118%);
+}
+
 .card-name {
   position: absolute;
   top: -12px;
   right: -8px;
 }
 
-.holographic-card:hover {
-  transform: scale(118%);
+.holographic-cards-scrollbar {
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+    scrollbar-width: auto;
+    scrollbar-gutter: auto;
+  }
+
+  @supports selector(::-webkit-scrollbar) {
+    ::-webkit-scrollbar {
+      height: 0.4em;
+    }
+
+    ::-webkit-scrollbar-track {
+      margin-inline: 4em;
+    }
+
+    @media (width >= 40rem /* --breakpoint-sm */) {
+      ::-webkit-scrollbar-track {
+        margin-inline: 7em;
+      }
+    }
+
+    @media (width >= 48rem /* --breakpoint-md */) {
+      ::-webkit-scrollbar-track {
+        margin-inline: 12em;
+      }
+    }
+  }
 }
 
 [data-theme="cartoon"] {
@@ -44,14 +74,9 @@
     }
 
     @supports selector(::-webkit-scrollbar) {
-      ::-webkit-scrollbar {
-        height: 0.4em;
-      }
-
       ::-webkit-scrollbar-track {
         background-color: var(--scrollbar-color-track);
         border-radius: var(--radius-4xl);
-        margin-inline: 12em;
       }
 
       ::-webkit-scrollbar-thumb {
@@ -97,14 +122,9 @@
     }
 
     @supports selector(::-webkit-scrollbar) {
-      ::-webkit-scrollbar {
-        height: 0.4em;
-      }
-
       ::-webkit-scrollbar-track {
         background-color: var(--scrollbar-color-track);
         border-radius: var(--radius-4xl);
-        margin-inline: 12em;
         box-shadow: var(--scrollbar-track-inner-shadow);
       }
 

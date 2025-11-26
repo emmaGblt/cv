@@ -16,7 +16,7 @@ function App() {
       <div data-theme={currentTheme} className="min-h-dvh">
         <div
           className={cn(
-            "px-10 py-24 md:px-20 lg:px-30 min-h-dvh flex flex-col xl:grid xl:grid-cols-[2fr_5fr] gap-8 relative",
+            "px-10 py-24 md:px-20 lg:px-30 min-h-dvh flex flex-col xl:grid xl:grid-cols-[2fr_5fr] gap-8 relative text-sm md:text-base",
             "cartoon:text-primary cartoon:bg-background",
             "neo:text-black/90 neo:bg-background"
           )}
