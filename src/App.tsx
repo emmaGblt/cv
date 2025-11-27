@@ -1,5 +1,5 @@
 import { PresentationCard } from "@components/Presentation";
-import CardWithTabs from "@components/ui/CardWithTabs";
+import { CardWithTabs } from "@components/ui";
 import AboutMeContent from "@components/AboutMe/AboutMeCard";
 import { useState } from "react";
 import type { TTheme } from "@/types";

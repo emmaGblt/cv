@@ -1,10 +1,9 @@
-import Card from "@components/ui/Card";
+import { Card, Tag, Divider, IconLink } from "@components/ui";
 import me from "@assets/me.jpg";
-import Tag from "@components/ui/Tag";
-import Divider from "@components/ui/Divider";
 import PresentationListItem from "./PresentationListItem";
 import { Mail, MapPin, Phone } from "lucide-react";
 import LinkedInLogo from "@assets/linkedin.svg?react";
+import GithubInLogo from "@assets/github.svg?react";
 import { cn } from "@/utils/classes";
 
 function PresentationCard() {
@@ -55,21 +54,19 @@ function PresentationCard() {
             />
           </ul>
           <Divider className="my-5 md:my-7 xl:hidden" />
-          <a
-            className={cn(
-              "group pushButton inline-flex gap-x-1.5",
-              "xl:cartoon:mt-7 cartoon:bg-secondary-2 cartoon:border-2 cartoon:border-primary cartoon:font-semibold cartoon:shadow-sm cartoon:shadow-primary/80 cartoon:rounded-md cartoon:py-2 cartoon:px-2.5",
-              "xl:neo:mt-9 neo:p-2.5 md:neo:p-4 neo:rounded-full neo:shadow-outer-md neo:active:shadow-inner-md"
-            )}
-            href="https://www.linkedin.com/in/emma-guilbault-078588183/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedInLogo className="cartoon:fill-primary neo:fill-secondary-2 size-4 md:neo:size-6 neo:group-hover:fill-black/50" />
-            <span className="neo:hidden text-xs md:text-sm font-semibold neo:group-hover:text-black/50">
-              Linkedin
-            </span>
-          </a>
+          <div className="flex items-center gap-4 xl:justify-center xl:mt-12 flex-wrap">
+            <IconLink
+              href="https://www.linkedin.com/in/emma-guilbault-078588183/"
+              name="LinkedIn"
+              Icon={LinkedInLogo}
+            />
+            <IconLink
+              href="https://github.com/emmaGblt"
+              name="Github"
+              Icon={GithubInLogo}
+              className="cartoon:bg-background"
+            />
+          </div>
         </div>
       </div>
     </Card>
