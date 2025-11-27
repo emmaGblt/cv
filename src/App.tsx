@@ -1,5 +1,5 @@
 import { PresentationCard } from "@components/Presentation";
-import CardWithTabs from "@components/ui/CardWithTabs";
+import { CardWithTabs } from "@components/ui";
 import AboutMeContent from "@components/AboutMe/AboutMeCard";
 import { useState } from "react";
 import type { TTheme } from "@/types";
@@ -9,14 +9,14 @@ import { cn } from "./utils/classes";
 import { CurriculumVitaeCard } from "./components/CurriculumVitae";
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState<TTheme>("cartoon");
+  const [currentTheme, setCurrentTheme] = useState<TTheme>("neomorphism");
 
   return (
     <ThemeContext value={currentTheme}>
       <div data-theme={currentTheme} className="min-h-dvh">
         <div
           className={cn(
-            "py-24 px-36 min-h-dvh grid grid-cols-[2fr_5fr] gap-x-6 relative",
+            "px-6 py-21 md:px-20 lg:px-30 min-h-dvh flex flex-col xl:grid xl:grid-cols-[2fr_5fr] gap-8 relative text-sm md:text-base",
             "cartoon:text-primary cartoon:bg-background",
             "neo:text-black/90 neo:bg-background"
           )}

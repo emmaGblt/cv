@@ -4,7 +4,7 @@ import "./index.css";
 function AboutMeContent() {
   return (
     <div>
-      <div className="flex flex-col gap-y-4 text-justify font-semibold">
+      <div className="flex flex-col gap-y-4 text-justify">
         <p>
           Développeuse full stack depuis 5 ans, je travaille sur des{" "}
           <strong className="font-bold">projets à impact et engagés</strong> !
@@ -36,15 +36,15 @@ function AboutMeContent() {
           connaissances au service de l’équipe.
         </p>
       </div>
-      <div className="mt-8 holographic-cards-scrollbar">
-        <h3 className="max-w-fit text-3xl cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary mb-4 neo:font-bold">
+      <div className="mt-5 md:mt-8 holographic-cards-scrollbar">
+        <h3 className="max-w-fit text-lg md:text-2xl cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary mb-2 md:mb-4 neo:font-bold">
           Compétences
         </h3>
         <p>
           Au fil des années, j'ai travaillé avec différentes technologies. En
           voici quelques-unes !
         </p>
-        <div className="relative h-56 overflow-x-auto">
+        <div className="relative h-40 md:h-56 overflow-x-auto">
           <SkillsList />
         </div>
       </div>
