@@ -1,4 +1,5 @@
 import { BookOpen, Briefcase } from "lucide-react";
+
 import Experiences from "./Experiences";
 
 function CurriculumVitaeCard() {

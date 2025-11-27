@@ -1,7 +1,7 @@
 import Card from "./Card";
 import CardWithTabs from "./CardWithTabs";
-import Tag from "./Tag";
-import IconLink from "./IconLink";
 import Divider from "./Divider";
+import IconLink from "./IconLink";
+import Tag from "./Tag";
 
-export { Card, CardWithTabs, Tag, IconLink, Divider };
+export { Card, CardWithTabs, Divider,IconLink, Tag };

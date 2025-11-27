@@ -1,5 +1,6 @@
-import SkillsList from "./SkillsList";
 import "./index.css";
+
+import SkillsList from "./SkillsList";
 
 function AboutMeContent() {
   return (
@@ -10,19 +11,19 @@ function AboutMeContent() {
           <strong className="font-bold">projets à impact et engagés</strong> !
         </p>
         <p>
-          Dans mon parcours, j'ai été amenée à travailler sur des applications
-          Saas avec Django, Ruby on Rails et React (React Router / Remix et
-          Typescript). J'ai également participé à la création et à la
-          maintenance d'un Design System et d'une librairie de composants
-          (Storybook).
+          Dans mon parcours, j&lsquo;ai été amenée à travailler sur des
+          applications Saas avec Django, Ruby on Rails et React (React Router /
+          Remix et Typescript). J&lsquo;ai également participé à la création et
+          à la maintenance d&lsquo;un Design System et d&lsquo;une librairie de
+          composants (Storybook).
         </p>
         <p>
-          J'aime collaborer, partager mes connaissances et le{" "}
-          <strong className="font-bold">travail d'équipe</strong>.
+          J&lsquo;aime collaborer, partager mes connaissances et le{" "}
+          <strong className="font-bold">travail d&lsquo;équipe</strong>.
         </p>
         <p>
-          J'ai à cœur de fournir un code de qualité, robuste et rigoureusement
-          testé.
+          J&lsquo;ai à cœur de fournir un code de qualité, robuste et
+          rigoureusement testé.
         </p>
         <p>
           J’ai travaillé au sein d’équipes pluridisciplinaires, en{" "}
@@ -41,8 +42,8 @@ function AboutMeContent() {
           Compétences
         </h3>
         <p>
-          Au fil des années, j'ai travaillé avec différentes technologies. En
-          voici quelques-unes !
+          Au fil des années, j&lsquo;ai travaillé avec différentes technologies.
+          En voici quelques-unes !
         </p>
         <div className="relative h-40 md:h-56 overflow-x-auto">
           <SkillsList />

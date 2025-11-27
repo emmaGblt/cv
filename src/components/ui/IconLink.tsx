@@ -1,5 +1,6 @@
-import { cn } from "@/utils/classes";
 import type { FC, SVGProps } from "react";
+
+import { cn } from "@/utils/classes";
 
 type IconLinkProps = {
   href: string;

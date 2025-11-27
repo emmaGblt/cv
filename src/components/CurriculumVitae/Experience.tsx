@@ -1,5 +1,6 @@
-import type { TExperience } from "@/types";
 import "./index.css";
+
+import type { TExperience } from "@/types";
 
 type ExperienceProps = TExperience;
 

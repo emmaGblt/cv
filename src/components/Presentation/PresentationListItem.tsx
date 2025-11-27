@@ -1,5 +1,6 @@
-import { cn } from "@/utils/classes";
 import type { LucideIcon } from "lucide-react";
+
+import { cn } from "@/utils/classes";
 
 type PresentationListItemProps = {
   Icon: LucideIcon;

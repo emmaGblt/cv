@@ -1,12 +1,14 @@
+import AboutMeContent from "@components/AboutMe/AboutMeCard";
 import { PresentationCard } from "@components/Presentation";
 import { CardWithTabs } from "@components/ui";
-import AboutMeContent from "@components/AboutMe/AboutMeCard";
 import { useState } from "react";
-import type { TTheme } from "@/types";
-import { ThemeContext } from "@/contexts/ThemeContext";
+
 import { ThemeButton } from "@/components/Theme";
-import { cn } from "./utils/classes";
+import { ThemeContext } from "@/contexts/ThemeContext";
+import type { TTheme } from "@/types";
+
 import { CurriculumVitaeCard } from "./components/CurriculumVitae";
+import { cn } from "./utils/classes";
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState<TTheme>("neomorphism");

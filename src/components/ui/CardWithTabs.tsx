@@ -1,9 +1,11 @@
 import { Tabs as BaseUiTabs } from "@base-ui-components/react/tabs";
-import { use, type ComponentProps } from "react";
-import Card from "./Card";
-import { cn } from "@/utils/classes";
-import Divider from "./Divider";
+import { type ComponentProps,use } from "react";
+
 import { ThemeContext } from "@/contexts/ThemeContext";
+import { cn } from "@/utils/classes";
+
+import Card from "./Card";
+import Divider from "./Divider";
 
 type BaseUiTabProps = ComponentProps<typeof BaseUiTabs.Tab>;
 type BaseUiRootProps = ComponentProps<typeof BaseUiTabs.Root>;

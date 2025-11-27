@@ -1,10 +1,12 @@
-import { Card, Tag, Divider, IconLink } from "@components/ui";
-import me from "@assets/me.jpg";
-import PresentationListItem from "./PresentationListItem";
-import { Mail, MapPin, Phone } from "lucide-react";
-import LinkedInLogo from "@assets/linkedin.svg?react";
 import GithubInLogo from "@assets/github.svg?react";
+import LinkedInLogo from "@assets/linkedin.svg?react";
+import me from "@assets/me.jpg";
+import { Card, Divider, IconLink,Tag } from "@components/ui";
+import { Mail, MapPin, Phone } from "lucide-react";
+
 import { cn } from "@/utils/classes";
+
+import PresentationListItem from "./PresentationListItem";
 
 function PresentationCard() {
   return (

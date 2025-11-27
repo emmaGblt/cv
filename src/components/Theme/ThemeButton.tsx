@@ -1,10 +1,12 @@
+import "./index.css";
+
+import { cn } from "@utils/classes";
+import { Bubbles, type LucideIcon,PartyPopper } from "lucide-react";
+import { use } from "react";
+
 import { ThemeContext } from "@/contexts/ThemeContext";
 import type { TTheme } from "@/types";
-import { cn } from "@utils/classes";
-import { Bubbles, PartyPopper, type LucideIcon } from "lucide-react";
-import { use } from "react";
 import { getNextTheme } from "@/utils/themes";
-import "./index.css";
 
 type ThemeButtonProps = {
   updateTheme: (newTheme: TTheme) => void;

@@ -1,7 +1,9 @@
-import type { TExperience } from "@/types";
-import Experience from "./Experience";
 import { type LucideIcon } from "lucide-react";
+
+import type { TExperience } from "@/types";
 import { cn } from "@/utils/classes";
+
+import Experience from "./Experience";
 
 type ExperiencesProps = {
   title: string;
