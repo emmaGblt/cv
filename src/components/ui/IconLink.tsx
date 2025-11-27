@@ -22,8 +22,8 @@ function IconLink({ href, name, Icon, className }: IconLinkProps) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Icon className="cartoon:fill-primary neo:fill-secondary-2 size-4 md:neo:size-6 neo:group-hover:fill-black/50" />
-      <span className="neo:hidden text-xs md:text-sm font-semibold neo:group-hover:text-black/50">
+      <Icon className="cartoon:fill-primary neo:fill-secondary-2 md:neo:size-6 neo:group-hover:fill-black/50 size-4" />
+      <span className="neo:hidden neo:group-hover:text-black/50 text-xs font-semibold md:text-sm">
         {name}
       </span>
     </a>

@@ -14,7 +14,7 @@ import AnimatedSkillItem from "./AnimatedSkillItem";
 
 function SkillsList() {
   return (
-    <ul className="absolute top-0 left-0 bottom-0 flex items-center justify-start gap-x-10 px-3 md:px-6">
+    <ul className="absolute top-0 bottom-0 left-0 flex items-center justify-start gap-x-10 px-3 md:px-6">
       <AnimatedSkillItem
         key="javascript"
         svgSrc={javascriptLogo}

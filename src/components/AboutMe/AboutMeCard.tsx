@@ -37,15 +37,15 @@ function AboutMeContent() {
           connaissances au service de l’équipe.
         </p>
       </div>
-      <div className="mt-5 md:mt-8 holographic-cards-scrollbar">
-        <h3 className="max-w-fit text-lg md:text-2xl cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary mb-2 md:mb-4 neo:font-bold">
+      <div className="holographic-cards-scrollbar mt-5 md:mt-8">
+        <h3 className="cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold mb-2 max-w-fit text-lg md:mb-4 md:text-2xl">
           Compétences
         </h3>
         <p>
           Au fil des années, j&lsquo;ai travaillé avec différentes technologies.
           En voici quelques-unes !
         </p>
-        <div className="relative h-40 md:h-56 overflow-x-auto">
+        <div className="relative h-40 overflow-x-auto md:h-56">
           <SkillsList />
         </div>
       </div>

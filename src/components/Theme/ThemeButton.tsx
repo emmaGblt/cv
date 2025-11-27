@@ -1,7 +1,7 @@
 import "./index.css";
 
 import { cn } from "@utils/classes";
-import { Bubbles, type LucideIcon,PartyPopper } from "lucide-react";
+import { Bubbles, type LucideIcon, PartyPopper } from "lucide-react";
 import { use } from "react";
 
 import { ThemeContext } from "@/contexts/ThemeContext";
@@ -38,13 +38,13 @@ function ThemeButton({ updateTheme }: ThemeButtonProps) {
       type="button"
       onClick={onThemeChange}
       className={cn(
-        "group z-10 cursor-pointer fixed top-6 right-8 min-w-[120px] py-2.5 px-4.5 transition-all duration-1000 ease-out pushButton",
+        "group pushButton fixed top-6 right-8 z-10 min-w-[120px] cursor-pointer px-4.5 py-2.5 transition-all duration-1000 ease-out",
         "cartoon:bg-background-2 cartoon:border-2 cartoon:border-primary cartoon:font-semibold cartoon:shadow-sm cartoon:shadow-primary/80 cartoon:rounded-md",
-        "neo:shadow-outer-md neo:active:shadow-inner-md neo:rounded-4xl neo:border neo:border-background neo:bg-background "
+        "neo:shadow-outer-md neo:active:shadow-inner-md neo:rounded-4xl neo:border neo:border-background neo:bg-background"
       )}
     >
       <span
-        className="slideInTheme flex items-center gap-x-2 neo:group-hover:text-black/50"
+        className="slideInTheme neo:group-hover:text-black/50 flex items-center gap-x-2"
         key={currentTheme}
       >
         <ThemeIcon className="size-5 shrink-0" />

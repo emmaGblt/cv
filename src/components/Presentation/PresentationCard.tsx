@@ -1,7 +1,7 @@
 import GithubInLogo from "@assets/github.svg?react";
 import LinkedInLogo from "@assets/linkedin.svg?react";
 import me from "@assets/me.jpg";
-import { Card, Divider, IconLink,Tag } from "@components/ui";
+import { Card, Divider, IconLink, Tag } from "@components/ui";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { cn } from "@/utils/classes";
@@ -11,28 +11,28 @@ import PresentationListItem from "./PresentationListItem";
 function PresentationCard() {
   return (
     <Card className="h-fit">
-      <div className="flex items-start xl:items-center flex-col">
-        <div className="flex xl:flex-col gap-x-4 items-center">
+      <div className="flex flex-col items-start xl:items-center">
+        <div className="flex items-center gap-x-4 xl:flex-col">
           <img
             src={me}
             className={cn(
-              "xl:w-1/2 md:w-32 w-20 sm:w-24 aspect-square xl:mb-6 mx-auto my-auto",
+              "mx-auto my-auto aspect-square w-20 sm:w-24 md:w-32 xl:mb-6 xl:w-1/2",
               "cartoon:rounded-4xl cartoon:border cartoon:border-transparent",
               "neo:rounded-full neo:border-5 neo:border-white"
             )}
             alt="Une photo de ma chienne Pichu et moi"
           />
-          <div className="flex xl:items-center items-start flex-col">
-            <h1 className="mb-1.5 md:mb-3 xl:text-center text-2xl md:text-4xl cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold">
+          <div className="flex flex-col items-start xl:items-center">
+            <h1 className="cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold mb-1.5 text-2xl md:mb-3 md:text-4xl xl:text-center">
               Emma Guilbault
             </h1>
             <Tag text="Développeuse full stack" className="hidden sm:block" />
-            <Tag text="Dev. full stack" className="sm:hidden block" />
+            <Tag text="Dev. full stack" className="block sm:hidden" />
           </div>
         </div>
-        <div className="w-full 2xl:w-[90%] xl:text-center">
+        <div className="w-full xl:text-center 2xl:w-[90%]">
           <Divider className="my-5 md:my-7" />
-          <ul className="flex flex-col xl:flex xl:flex-col md:grid md:grid-cols-2 gap-x-8 gap-y-6">
+          <ul className="flex flex-col gap-x-8 gap-y-6 md:grid md:grid-cols-2 xl:flex xl:flex-col">
             <PresentationListItem
               key="email"
               Icon={Mail}
@@ -56,7 +56,7 @@ function PresentationCard() {
             />
           </ul>
           <Divider className="my-5 md:my-7 xl:hidden" />
-          <div className="flex items-center gap-4 xl:justify-center xl:mt-12 flex-wrap">
+          <div className="flex flex-wrap items-center gap-4 xl:mt-12 xl:justify-center">
             <IconLink
               href="https://www.linkedin.com/in/emma-guilbault-078588183/"
               name="LinkedIn"

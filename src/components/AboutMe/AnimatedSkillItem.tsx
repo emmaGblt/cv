@@ -14,16 +14,16 @@ function AnimatedSkillItem({
   // add alt text
 
   return (
-    <li className="shrink-0 grow-0 flex-1">
+    <li className="flex-1 shrink-0 grow-0">
       <a href={href} target="_blank" rel="noopener noreferrer">
-        <div className="size-24 md:size-32 holographic-card neo:shadow-outer-md">
-          <span className="py-0.5 px-1.5 md:py-1 md:px-2.5 text-xs md:text-sm font-bold card-name">
+        <div className="holographic-card neo:shadow-outer-md size-24 md:size-32">
+          <span className="card-name px-1.5 py-0.5 text-xs font-bold md:px-2.5 md:py-1 md:text-sm">
             {name}
           </span>
           <img
             src={svgSrc}
             alt={alt}
-            className="size-12 md:size-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
+            className="absolute top-1/2 left-1/2 size-12 -translate-x-1/2 -translate-y-1/2 md:size-16"
           />
         </div>
       </a>
