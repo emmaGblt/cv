@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -9,11 +11,11 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        plugins: [["babel-plugin-react-compiler"]],
-      },
+        plugins: [["babel-plugin-react-compiler"]]
+      }
     }),
     tailwindcss(),
-    svgr(),
+    svgr()
   ],
   resolve: {
     alias: {
@@ -21,7 +23,14 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "./src/assets"),
       "@components": path.resolve(__dirname, "./src/components"),
       "@utils": path.resolve(__dirname, "./src/utils"),
-      "@contexts": path.resolve(__dirname, "./src/contexts"),
-    },
+      "@contexts": path.resolve(__dirname, "./src/contexts")
+    }
   },
+  test: {
+    // include: ["**/*.test.tsx?"],
+    exclude: ["**/node_modules/**"],
+    globals: true,
+    environment: "happy-dom",
+    setupFiles: "./src/setup-tests.ts"
+  }
 });
