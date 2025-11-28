@@ -1,7 +1,9 @@
-import type { TExperience } from "@/types";
-import Experience from "./Experience";
 import { type LucideIcon } from "lucide-react";
+
+import type { TExperience } from "@/types";
 import { cn } from "@/utils/classes";
+
+import Experience from "./Experience";
 
 type ExperiencesProps = {
   title: string;
@@ -12,17 +14,17 @@ type ExperiencesProps = {
 function Experiences({ title, experiences, Icon }: ExperiencesProps) {
   return (
     <div className="md:w-11/12">
-      <div className="flex items-center gap-x-2.5 md:gap-x-3 mb-1.5 md:mb-3">
+      <div className="mb-1.5 flex items-center gap-x-2.5 md:mb-3 md:gap-x-3">
         <span
           className={cn(
-            "p-1.5 md:p-2.5 transition-all ease-out duration-1000 z-10",
+            "z-10 p-1.5 transition-all duration-1000 ease-out md:p-2.5",
             "cartoon:border-2 cartoon:border-primary cartoon:rounded-md cartoon:bg-light cartoon:shadow-sm cartoon:shadow-primary/80",
             "neo:bg-background neo:rounded-2xl neo:shadow-outer-md neo:border neo:border-background"
           )}
         >
           <Icon className="size-3 md:size-5" />
         </span>
-        <h3 className="font-bold text-lg md:text-2xl">{title}</h3>
+        <h3 className="text-lg font-bold md:text-2xl">{title}</h3>
       </div>
       <ol className="flex flex-col gap-y-4 md:gap-y-5">
         {experiences.map((experience) => (

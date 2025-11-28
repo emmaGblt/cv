@@ -111,8 +111,8 @@
   .holographic-cards-scrollbar {
     --scrollbar-color-track: var(--color-primary);
     --scrollbar-color-thumb: var(--color-secondary-2);
-    --scrollbar-track-inner-shadow: inset 0.2rem 0.2rem 0.5rem
-        var(--color-primary),
+    --scrollbar-track-inner-shadow:
+      inset 0.2rem 0.2rem 0.5rem var(--color-primary),
       inset -0.2rem -0.2rem 0.5rem var(--color-white);
 
     @supports not selector(::-webkit-scrollbar) {

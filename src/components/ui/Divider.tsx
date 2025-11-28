@@ -7,7 +7,7 @@ function Divider({ className, type = "thin" }: DividerProps) {
     <hr
       className={cn(
         type === "thick"
-          ? "h-2.5 bg-secondary-2 border-none rounded shadow-sm shadow-primary/80"
+          ? "bg-secondary-2 shadow-primary/80 h-2.5 rounded border-none shadow-sm"
           : "neo:text-transparent neo:shadow-inner-sm h-1 rounded",
         className
       )}

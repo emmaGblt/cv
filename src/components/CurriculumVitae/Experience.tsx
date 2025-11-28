@@ -1,5 +1,6 @@
-import type { TExperience } from "@/types";
 import "./index.css";
+
+import type { TExperience } from "@/types";
 
 type ExperienceProps = TExperience;
 
@@ -23,7 +24,7 @@ function Experience({
   return (
     <li
       key={`${title} - ${organization}`}
-      className="relative experience-list-item"
+      className="experience-list-item relative"
     >
       <div className="ml-9 md:ml-14.5">
         <h4 className="font-bold md:text-lg">{title}</h4>
@@ -31,12 +32,12 @@ function Experience({
           {organization}
           <span className="text-sm italic">&nbsp;-&nbsp;{location}</span>
         </div>
-        <p className="cartoon:text-secondary-2 neo:text-secondary-1 text-sm mb-1">
+        <p className="cartoon:text-secondary-2 neo:text-secondary-1 mb-1 text-sm">
           {formattedStartDate}
           {formattedEndDate ? ` - ${formattedEndDate}` : ""}
         </p>
         {descriptions && descriptions.length > 0 && (
-          <ul className="ml-4 cartoon:text-primary/70 neo:text-black/70 text-sm md:text-base">
+          <ul className="cartoon:text-primary/70 neo:text-black/70 ml-4 text-sm md:text-base">
             {descriptions.map((description, index) => (
               <li key={`description-${index + 1}`} className="list-disc">
                 {description}

@@ -1,4 +1,5 @@
 import { BookOpen, Briefcase } from "lucide-react";
+
 import Experiences from "./Experiences";
 
 function CurriculumVitaeCard() {
@@ -21,8 +22,8 @@ function CurriculumVitaeCard() {
               "Migrer les interfaces historiques en utilisant notre Design System, notre librairie de composants et les technologies React / Typescript / React router",
               "Assurer la stabilité de ces nouvelles pages par l'écriture de tests systématiques",
               "Réaliser des développements front-end sur l'application historique (Ruby on Rails)",
-              "Réaliser des développements full-stack (Ruby on Rails / React)",
-            ],
+              "Réaliser des développements full-stack (Ruby on Rails / React)"
+            ]
           },
           {
             title: "Développeuse full-stack (Python / React)",
@@ -36,8 +37,8 @@ function CurriculumVitaeCard() {
               "Développer les fonctionnalités front-end et back-end",
               "Assurer la stabilité de l'application par l'écriture de tests systématiques",
               "Assurer la maintenance de l'application",
-              "Intervenir pour identifier et corriger les bugs et apporter une solution rapide à nos utilisateurs",
-            ],
+              "Intervenir pour identifier et corriger les bugs et apporter une solution rapide à nos utilisateurs"
+            ]
           },
           {
             title: "Développeuse full-stack (Python / React)",
@@ -50,9 +51,9 @@ function CurriculumVitaeCard() {
               "Fonctionnalité de suivi des données manquantes au sein d'un questionnaire",
               "Fonctionnalité de contrôle de la validité des données au sein d'un questionnaire",
               "Fonctionnalité de qualification des données manquantes au sein d'un questionnaire",
-              "Espace de communauté permettant de mettre en avant certains types de compte",
-            ],
-          },
+              "Espace de communauté permettant de mettre en avant certains types de compte"
+            ]
+          }
         ]}
       />
       <Experiences
@@ -68,8 +69,8 @@ function CurriculumVitaeCard() {
             showOnlyDateYear: true,
             descriptions: [
               "Déléguée de promotion",
-              "Bourse d'excellence de la Fondation Francis Bouygues",
-            ],
+              "Bourse d'excellence de la Fondation Francis Bouygues"
+            ]
           },
           {
             title: "Cycle préparatoire ingénieur",
@@ -83,8 +84,8 @@ function CurriculumVitaeCard() {
               "Section Théâtres-Études",
               "Bourse d'excellence de la Fondation Francis Bouygues",
               "Bourse Lumières des Cités du CRIJ Normandie Rouen",
-              "Bourse au mérite du CROUS",
-            ],
+              "Bourse au mérite du CROUS"
+            ]
           },
           {
             title: "Baccalauréat SVT",
@@ -95,17 +96,17 @@ function CurriculumVitaeCard() {
             descriptions: [
               "Niveau : Mention Très Bien",
               "Spécialité Mathématiques",
-              "Mention européenne en Espagnol",
+              "Mention européenne en Espagnol"
             ],
-            showOnlyDateYear: true,
+            showOnlyDateYear: true
           },
           {
             title: "Diploma de español como lengua extranjera nivel B1",
             organization: "Instituto Cervantes",
             location: "Dieppe (Normandie)",
             startDate: new Date("2015-09-01"),
-            showOnlyDateYear: true,
-          },
+            showOnlyDateYear: true
+          }
         ]}
       />
     </div>

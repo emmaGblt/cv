@@ -67,7 +67,8 @@
 [data-theme="neomorphism"] {
   .experience-list-item:not(:last-child)::before {
     width: 2px;
-    box-shadow: inset -1px -1px 1px 0 rgba(255, 255, 255, 0.8),
+    box-shadow:
+      inset -1px -1px 1px 0 rgba(255, 255, 255, 0.8),
       inset 1px 1px 1px 0 var(--color-primary);
   }
 

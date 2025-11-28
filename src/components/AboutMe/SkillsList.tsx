@@ -1,19 +1,20 @@
-import AnimatedSkillItem from "./AnimatedSkillItem";
-import reactLogo from "@assets/react.svg";
 import djangoLogo from "@assets/django.svg";
 import githubLogo from "@assets/github.svg";
-import tailwindCSSLogo from "@assets/tailwindcss.svg";
-import vitestLogo from "@assets/vitest.svg";
-import testingLibraryLogo from "@assets/testing-library.svg";
-import pythonLogo from "@assets/python.svg";
 import javascriptLogo from "@assets/javascript.svg";
-import typescriptLogo from "@assets/typescript.svg";
+import pythonLogo from "@assets/python.svg";
+import reactLogo from "@assets/react.svg";
 import reactRouterLogo from "@assets/react-router.svg";
+import tailwindCSSLogo from "@assets/tailwindcss.svg";
+import testingLibraryLogo from "@assets/testing-library.svg";
+import typescriptLogo from "@assets/typescript.svg";
 import viteLogo from "@assets/vite.svg";
+import vitestLogo from "@assets/vitest.svg";
+
+import AnimatedSkillItem from "./AnimatedSkillItem";
 
 function SkillsList() {
   return (
-    <ul className="absolute top-0 left-0 bottom-0 flex items-center justify-start gap-x-10 px-3 md:px-6">
+    <ul className="absolute top-0 bottom-0 left-0 flex items-center justify-start gap-x-10 px-3 md:px-6">
       <AnimatedSkillItem
         key="javascript"
         svgSrc={javascriptLogo}
