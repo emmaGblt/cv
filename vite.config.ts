@@ -27,7 +27,6 @@ export default defineConfig({
     }
   },
   test: {
-    // include: ["**/*.test.tsx?"],
     exclude: ["**/node_modules/**"],
     globals: true,
     environment: "happy-dom",

@@ -13,7 +13,7 @@ function PresentationListItem({
   Icon,
   title,
   text,
-  className,
+  className
 }: PresentationListItemProps) {
   return (
     <li className="cartoon:text-primary neo:text-secondary-2 grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-4 text-left">
