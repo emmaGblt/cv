@@ -16,12 +16,12 @@ const ORDERED_THEMES: Array<TTheme> = ["cartoon", "neomorphism"];
 
 const THEME_NAMES: Record<TTheme, string> = {
   cartoon: "Cartoon",
-  neomorphism: "Néomorphisme",
+  neomorphism: "Néomorphisme"
 };
 
 const THEME_ICONS: Record<TTheme, LucideIcon> = {
   cartoon: PartyPopper,
-  neomorphism: Bubbles,
+  neomorphism: Bubbles
 };
 
 function ThemeButton({ updateTheme }: ThemeButtonProps) {
@@ -43,10 +43,7 @@ function ThemeButton({ updateTheme }: ThemeButtonProps) {
         "neo:shadow-outer-md neo:active:shadow-inner-md neo:rounded-4xl neo:border neo:border-background neo:bg-background"
       )}
     >
-      <span
-        className="slideInTheme neo:group-hover:text-black/50 flex items-center gap-x-2"
-        key={currentTheme}
-      >
+      <span className="slideInTheme neo:group-hover:text-black/50 flex items-center gap-x-2">
         <ThemeIcon className="size-5 shrink-0" />
         {THEME_NAMES[currentTheme]}
       </span>
