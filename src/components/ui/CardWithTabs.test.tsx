@@ -1,9 +1,10 @@
 import { render, screen, within } from "@testing-library/react";
 import type { ReactNode } from "react";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import Card from "./Card";
 import CardWithTabs from "./CardWithTabs";
+import Divider from "./Divider";
 
 vi.mock("@components/ui/Card", () => {
   return {
@@ -14,6 +15,8 @@ vi.mock("@components/ui/Card", () => {
       ))
   };
 });
+
+vi.mock("@components/ui/Divider");
 
 describe("CardWithTabs renders properly", () => {
   beforeEach(() =>
@@ -29,6 +32,8 @@ describe("CardWithTabs renders properly", () => {
     )
   );
 
+  afterEach(() => vi.clearAllMocks());
+
   it("renders a Card component", () => {
     expect(Card).toHaveBeenCalledOnce();
   });
@@ -41,6 +46,16 @@ describe("CardWithTabs renders properly", () => {
     expect(within(tabs[1]).queryByText("Tab 2")).toBeVisible();
     expect(tabs[1]).toHaveAttribute("data-selected"); // tab2 is the default value
     expect(within(tabs[2]).queryByText("Tab 3")).toBeVisible();
+  });
+
+  it("renders the selected tab name in a heading", () => {
+    expect(
+      screen.getByRole("heading", { level: 2, name: "Tab 2" })
+    ).toBeVisible();
+  });
+
+  it("renders a Divider component", () => {
+    expect(Divider).toHaveBeenCalledOnce();
   });
 
   it("renders the content of the default selected tab", () => {
