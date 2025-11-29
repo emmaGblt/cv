@@ -1,13 +1,13 @@
-import AboutMeContent from "@components/AboutMe/AboutMeCard";
 import { PresentationCard } from "@components/Presentation";
 import { CardWithTabs } from "@components/ui";
 import { useState } from "react";
 
+import { AboutMeContent } from "@/components/AboutMe";
 import { ThemeButton } from "@/components/Theme";
 import { ThemeContext } from "@/contexts/ThemeContext";
 import type { TTheme } from "@/types";
 
-import { CurriculumVitaeCard } from "./components/CurriculumVitae";
+import { CurriculumVitaeContent } from "./components/CurriculumVitae";
 import { cn } from "./utils/classes";
 
 function App() {
@@ -31,18 +31,18 @@ function App() {
               {
                 value: "about-me",
                 title: "À propos",
-                content: <AboutMeContent />,
+                content: <AboutMeContent />
               },
               {
                 value: "resume",
                 title: "Mon CV",
-                content: <CurriculumVitaeCard />,
+                content: <CurriculumVitaeContent />
               },
               {
                 value: "other",
                 title: "Autre",
-                content: <div>Another work in progress here!</div>,
-              },
+                content: <div>Another work in progress here!</div>
+              }
             ]}
           />
         </div>

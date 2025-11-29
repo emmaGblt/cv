@@ -1,3 +1,3 @@
-import AboutMeCard from "./AboutMeCard";
+import AboutMeContent from "./AboutMeContent";
 
-export { AboutMeCard };
+export { AboutMeContent };

@@ -1,3 +1,3 @@
-import CurriculumVitaeCard from "./CurriculumVitaeCard";
+import CurriculumVitaeContent from "./CurriculumVitaeContent";
 
-export { CurriculumVitaeCard };
+export { CurriculumVitaeContent };

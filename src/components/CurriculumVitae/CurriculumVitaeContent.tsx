@@ -2,7 +2,7 @@ import { BookOpen, Briefcase } from "lucide-react";
 
 import Experiences from "./Experiences";
 
-function CurriculumVitaeCard() {
+function CurriculumVitaeContent() {
   return (
     <div className="flex flex-col gap-4 md:gap-y-6">
       <Experiences
@@ -113,4 +113,4 @@ function CurriculumVitaeCard() {
   );
 }
 
-export default CurriculumVitaeCard;
+export default CurriculumVitaeContent;
