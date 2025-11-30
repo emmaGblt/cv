@@ -1,4 +1,4 @@
-name: Merge Pull Request
+name: Pull Request
 run-name: ${{ github.actor }} is testing new commits on ${{ github.ref_name }} 🚀
 on: [push]
 jobs:

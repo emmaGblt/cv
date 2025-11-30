@@ -2,7 +2,7 @@
 
 ## What is it?
 
-A `React` app, built with `Vite` and deployed with `Netlify` to showcase some of my frontend-end development skills. ✨
+A `React` app, built with `Vite` and deployed with `Netlify` to showcase some of my front-end development skills. ✨
 
 The design was made using `TailwindCSS` framework and the site is fully responsive! 📱💻
 
