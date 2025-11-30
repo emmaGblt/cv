@@ -52,7 +52,7 @@ describe("ExperienceListItem renders properly", () => {
 
   it("shows the period (only numeric year)", () => {
     cleanup();
-    const { queryByText, debug } = render(
+    const { queryByText } = render(
       <ExperienceListItem
         title="Développeuse font-end"
         organization="Carbo"
@@ -70,8 +70,6 @@ describe("ExperienceListItem renders properly", () => {
     const period = getStringPeriod(startDate, endDate, {
       year: "numeric"
     });
-
-    debug();
 
     expect(queryByText(period)).toBeVisible();
   });
