@@ -1,10 +1,10 @@
-# My online Curriculum Vitae
+# [My online Curriculum Vitae](https://emma-guilbault.netlify.app/)
 
 ## What is it?
 
 A `React` app, built with `Vite` and deployed with `Netlify` to showcase some of my frontend-end development skills. ✨
 
-The design is made with `TailwindCSS` framework and the site is full responsive! 📱💻
+The design was made using `TailwindCSS` framework and the site is fully responsive! 📱💻
 
 All functions and components are tested using `Vitest` and `Testing Library`. 🔒
 
