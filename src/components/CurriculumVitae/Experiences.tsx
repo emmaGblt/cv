@@ -3,7 +3,7 @@ import { type LucideIcon } from "lucide-react";
 import type { TExperience } from "@/types";
 import { cn } from "@/utils/classes";
 
-import Experience from "./Experience";
+import ExperienceListItem from "./ExperienceListItem";
 
 type ExperiencesProps = {
   title: string;
@@ -28,7 +28,7 @@ function Experiences({ title, experiences, Icon }: ExperiencesProps) {
       </div>
       <ol className="flex flex-col gap-y-4 md:gap-y-5">
         {experiences.map((experience) => (
-          <Experience {...experience} key={experience.title} />
+          <ExperienceListItem {...experience} key={experience.title} />
         ))}
       </ol>
     </div>
