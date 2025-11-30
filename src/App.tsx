@@ -15,6 +15,31 @@ function App() {
 
   return (
     <ThemeContext value={currentTheme}>
+      <link
+        rel="icon"
+        type="image/png"
+        href={`/${currentTheme === "cartoon" ? "cartoon" : "neo"}/favicon-96x96.png`}
+        sizes="96x96"
+      />
+      <link
+        rel="icon"
+        type="image/svg+xml"
+        href={`/${currentTheme === "cartoon" ? "cartoon" : "neo"}/favicon.svg`}
+      />
+      <link
+        rel="shortcut icon"
+        href={`/${currentTheme === "cartoon" ? "cartoon" : "neo"}/favicon.ico`}
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href={`/${currentTheme === "cartoon" ? "cartoon" : "neo"}/apple-touch-icon.png`}
+      />
+      <meta name="apple-mobile-web-app-title" content="Emma's CV" />
+      <link
+        rel="manifest"
+        href={`/${currentTheme === "cartoon" ? "cartoon" : "neo"}/site.webmanifest`}
+      />
       <div data-theme={currentTheme} className="min-h-dvh">
         <div
           className={cn(
