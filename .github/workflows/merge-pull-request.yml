@@ -19,5 +19,11 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Check linting
+      - name: Run linter
         run: yarn lint
+
+      - name: Run formatter check
+        run: yarn format:check
+
+      - name: Run tests
+        run: yarn tests
