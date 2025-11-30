@@ -32,5 +32,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", ".prettierrc.ts", "eslint.config.ts"]
+  "include": ["src", ".prettierrc.js", "eslint.config.js"]
 }
