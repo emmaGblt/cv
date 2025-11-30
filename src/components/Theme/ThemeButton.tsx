@@ -1,12 +1,12 @@
 import "./index.css";
 
-import { cn } from "@utils/classes";
 import { Bubbles, type LucideIcon, PartyPopper } from "lucide-react";
 import { use } from "react";
 
 import { ThemeContext } from "@/contexts/ThemeContext";
 import type { TTheme } from "@/types";
-import { getNextTheme } from "@/utils/themes";
+import { getNextItem } from "@/utils/array";
+import { cn } from "@/utils/classes";
 
 type ThemeButtonProps = {
   updateTheme: (newTheme: TTheme) => void;
@@ -29,8 +29,8 @@ function ThemeButton({ updateTheme }: ThemeButtonProps) {
   const ThemeIcon = THEME_ICONS[currentTheme];
 
   const onThemeChange = () => {
-    const nextTheme = getNextTheme(currentTheme, ORDERED_THEMES);
-    updateTheme(nextTheme);
+    const nextTheme = getNextItem(currentTheme, ORDERED_THEMES);
+    if (nextTheme) updateTheme(nextTheme);
   };
 
   return (
