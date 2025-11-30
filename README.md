@@ -12,7 +12,7 @@ In order to create clean and consistent code, I used the `Eslint` linter as well
 
 All my pull requests are checked by running the linter, formatter, type checking and tests via Github Actions. 🛡️
 
-## Where?
+## Where?
 
 You can visit the site here: https://emma-guilbault.netlify.app/
 
