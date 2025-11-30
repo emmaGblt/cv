@@ -1,12 +1,12 @@
 import "./index.css";
 
-import { cn } from "@utils/classes";
 import { Bubbles, type LucideIcon, PartyPopper } from "lucide-react";
 import { use } from "react";
 
 import { ThemeContext } from "@/contexts/ThemeContext";
 import type { TTheme } from "@/types";
-import { getNextTheme } from "@/utils/themes";
+import { getNextItem } from "@/utils/array";
+import { cn } from "@/utils/classes";
 
 type ThemeButtonProps = {
   updateTheme: (newTheme: TTheme) => void;
@@ -16,12 +16,12 @@ const ORDERED_THEMES: Array<TTheme> = ["cartoon", "neomorphism"];
 
 const THEME_NAMES: Record<TTheme, string> = {
   cartoon: "Cartoon",
-  neomorphism: "Néomorphisme",
+  neomorphism: "Néomorphisme"
 };
 
 const THEME_ICONS: Record<TTheme, LucideIcon> = {
   cartoon: PartyPopper,
-  neomorphism: Bubbles,
+  neomorphism: Bubbles
 };
 
 function ThemeButton({ updateTheme }: ThemeButtonProps) {
@@ -29,8 +29,8 @@ function ThemeButton({ updateTheme }: ThemeButtonProps) {
   const ThemeIcon = THEME_ICONS[currentTheme];
 
   const onThemeChange = () => {
-    const nextTheme = getNextTheme(currentTheme, ORDERED_THEMES);
-    updateTheme(nextTheme);
+    const nextTheme = getNextItem(currentTheme, ORDERED_THEMES);
+    if (nextTheme) updateTheme(nextTheme);
   };
 
   return (
@@ -43,10 +43,7 @@ function ThemeButton({ updateTheme }: ThemeButtonProps) {
         "neo:shadow-outer-md neo:active:shadow-inner-md neo:rounded-4xl neo:border neo:border-background neo:bg-background"
       )}
     >
-      <span
-        className="slideInTheme neo:group-hover:text-black/50 flex items-center gap-x-2"
-        key={currentTheme}
-      >
+      <span className="slideInTheme neo:group-hover:text-black/50 flex items-center gap-x-2">
         <ThemeIcon className="size-5 shrink-0" />
         {THEME_NAMES[currentTheme]}
       </span>

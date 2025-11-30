@@ -13,7 +13,7 @@ export default defineConfig([
     plugins: { js },
     extends: ["js/recommended"],
     languageOptions: { globals: globals.browser },
-    settings: { react: { version: "detect" } },
+    settings: { react: { version: "detect" } }
   },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
@@ -21,7 +21,7 @@ export default defineConfig([
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
-      "unused-imports": unusedImports,
+      "unused-imports": unusedImports
     },
     rules: {
       "no-console": ["error", { allow: ["error", "info"] }],
@@ -36,9 +36,9 @@ export default defineConfig([
           vars: "all",
           varsIgnorePattern: "^_",
           args: "after-used",
-          argsIgnorePattern: "^_",
-        },
-      ],
-    },
-  },
+          argsIgnorePattern: "^_"
+        }
+      ]
+    }
+  }
 ]);

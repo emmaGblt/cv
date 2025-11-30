@@ -9,7 +9,7 @@ function AnimatedSkillItem({
   svgSrc,
   href,
   alt,
-  name,
+  name
 }: AnimatedSkillItemProps) {
   // add alt text
 

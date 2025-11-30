@@ -1,25 +1,23 @@
 import "./index.css";
 
 import type { TExperience } from "@/types";
+import { getStringPeriod } from "@/utils/date";
 
-type ExperienceProps = TExperience;
+type ExperienceListItemProps = TExperience;
 
-function Experience({
+function ExperienceListItem({
   title,
   organization,
   location,
   startDate,
   endDate,
   descriptions,
-  showOnlyDateYear = false,
-}: ExperienceProps) {
-  const dateTimeFormatter = new Intl.DateTimeFormat("fr-FR", {
+  showOnlyDateYear = false
+}: ExperienceListItemProps) {
+  const period = getStringPeriod(startDate, endDate, {
     month: showOnlyDateYear ? undefined : "short",
-    year: "numeric",
+    year: "numeric"
   });
-
-  const formattedStartDate = dateTimeFormatter.format(startDate);
-  const formattedEndDate = endDate && dateTimeFormatter.format(endDate);
 
   return (
     <li
@@ -30,11 +28,11 @@ function Experience({
         <h4 className="font-bold md:text-lg">{title}</h4>
         <div className="cartoon:text-primary/80">
           {organization}
-          <span className="text-sm italic">&nbsp;-&nbsp;{location}</span>
+          <span>&nbsp;-&nbsp;</span>
+          <span className="text-sm italic">{location}</span>
         </div>
         <p className="cartoon:text-secondary-2 neo:text-secondary-1 mb-1 text-sm">
-          {formattedStartDate}
-          {formattedEndDate ? ` - ${formattedEndDate}` : ""}
+          {period}
         </p>
         {descriptions && descriptions.length > 0 && (
           <ul className="cartoon:text-primary/70 neo:text-black/70 ml-4 text-sm md:text-base">
@@ -50,4 +48,4 @@ function Experience({
   );
 }
 
-export default Experience;
+export default ExperienceListItem;
