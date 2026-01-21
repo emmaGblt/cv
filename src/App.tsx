@@ -62,11 +62,6 @@ function App() {
                 value: "resume",
                 title: "Mon CV",
                 content: <CurriculumVitaeContent />
-              },
-              {
-                value: "other",
-                title: "Autre",
-                content: <div>Another work in progress here!</div>
               }
             ]}
           />

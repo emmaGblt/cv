@@ -29,7 +29,7 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
       <BaseUiTabs.Root defaultValue={defaultValue} orientation="horizontal">
         <BaseUiTabs.List
           className={cn(
-            "mb-8 grid grid-cols-3 transition-all duration-1000 ease-out sm:mx-10 md:absolute md:m-0",
+            "mb-8 grid grid-cols-2 transition-all duration-1000 ease-out sm:mx-10 md:absolute md:m-0",
             "cartoon:bg-background/40 cartoon:border-primary cartoon:border-4 cartoon:rounded-bl-md cartoon:-right-1 cartoon:-top-1",
             "neo:rounded-2xl neo:shadow-outer-md neo:top-4 neo:right-4 neo:border neo:border-background"
           )}
