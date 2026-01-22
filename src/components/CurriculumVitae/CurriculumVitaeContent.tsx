@@ -26,7 +26,7 @@ function CurriculumVitaeContent() {
             ]
           },
           {
-            title: "Développeuse full-stack (Python / React)",
+            title: "Développeuse full stack (Python / React)",
             organization: "Carbo",
             location: "Normandie (remote)",
             startDate: new Date("2023-07-10"),
@@ -41,7 +41,7 @@ function CurriculumVitaeContent() {
             ]
           },
           {
-            title: "Développeuse full-stack (Python / React)",
+            title: "Développeuse full stack (Python / React)",
             organization: "Doqboard",
             location: "Normandie (remote)",
             startDate: new Date("2021-02-01"),
