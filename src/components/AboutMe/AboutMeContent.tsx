@@ -45,9 +45,8 @@ function AboutMeContent() {
           Au fil des années, j&lsquo;ai travaillé avec différentes technologies.
           En voici quelques-unes !
         </p>
-        <div className="relative h-40 overflow-x-auto md:h-56">
-          <SkillsList />
-        </div>
+
+        <SkillsList />
       </div>
     </div>
   );
