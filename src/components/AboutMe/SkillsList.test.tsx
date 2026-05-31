@@ -1,14 +1,30 @@
 import { render, screen } from "@testing-library/react";
-import { beforeEach, describe, expect, it, test } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, test, vi } from "vitest";
 
+import SkillFilter from "./SkillFilter";
 import SkillsList from "./SkillsList";
+
+vi.mock("@components/AboutMe/SkillFilter");
 
 describe("SkillsList renders properly", () => {
   beforeEach(() => render(<SkillsList />));
 
-  it("renders a list and 11 liste items", () => {
+  afterEach(() => vi.clearAllMocks());
+
+  it("renders a list and 11 list items", () => {
     expect(screen.getByRole("list")).toBeVisible();
-    expect(screen.getAllByRole("listitem").length).toBe(20);
+    expect(screen.getAllByRole("listitem").length).toBe(21);
+  });
+
+  it("renders the SkillFilter component", () => {
+    expect(SkillFilter).toHaveBeenCalledOnce();
+    expect(SkillFilter).toHaveBeenCalledWith(
+      {
+        filter: "none",
+        handleFilterChange: expect.any(Function)
+      },
+      undefined
+    );
   });
 
   test("each skill is represented", () => {
@@ -19,6 +35,7 @@ describe("SkillsList renders properly", () => {
     expect(screen.queryByText("django")).toBeVisible();
     expect(screen.queryByText("react router")).toBeVisible();
     expect(screen.queryByText("github")).toBeVisible();
+    expect(screen.queryByText("gitlab")).toBeVisible();
     expect(screen.queryByText("tailwindcss")).toBeVisible();
     expect(screen.queryByText("vite")).toBeVisible();
     expect(screen.queryByText("vitest")).toBeVisible();
