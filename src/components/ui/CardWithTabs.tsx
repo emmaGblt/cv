@@ -1,4 +1,4 @@
-import { Tabs as BaseUiTabs } from "@base-ui-components/react/tabs";
+import { Tabs as BaseUiTabs } from "@base-ui/react/tabs";
 import { type ComponentProps, use } from "react";
 
 import { ThemeContext } from "@/contexts/ThemeContext";
@@ -39,8 +39,8 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
               key={`tab-${tab.value}`}
               value={tab.value}
               className={cn(
-                "text-secondary-2 cartoon:hover:text-primary data-selected:text-primary cartoon:rounded-md cursor-pointer px-3 py-3.5 font-bold transition-all duration-300 ease-out md:px-5 md:py-4",
-                "neo:data-selected:shadow-inner-md neo:rounded-2xl neo:data-selected:text-secondary-1 neo:hover:text-black/50"
+                "text-secondary-2 cartoon:hover:text-primary data-active:text-primary cartoon:rounded-md cursor-pointer px-3 py-3.5 font-bold transition-all duration-300 ease-out md:px-5 md:py-4",
+                "neo:data-active:shadow-inner-md neo:rounded-2xl neo:data-active:text-secondary-1 neo:hover:text-black/50"
               )}
             >
               {tab.title}
