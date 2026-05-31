@@ -1,10 +1,19 @@
+import ansibleLogo from "@assets/ansible.svg";
+import awsLogo from "@assets/aws.svg";
 import djangoLogo from "@assets/django.svg";
+import dockerLogo from "@assets/docker.svg";
 import githubLogo from "@assets/github.svg";
+import grafanaLogo from "@assets/grafana.svg";
 import javascriptLogo from "@assets/javascript.svg";
+import kubernetesLogo from "@assets/kubernetes.svg";
+import prometheusLogo from "@assets/prometheus.svg";
+import pytestLogo from "@assets/pytest.svg";
 import pythonLogo from "@assets/python.svg";
 import reactLogo from "@assets/react.svg";
 import reactRouterLogo from "@assets/react-router.svg";
+import storybookLogo from "@assets/storybook.svg";
 import tailwindCSSLogo from "@assets/tailwindcss.svg";
+import terraformLogo from "@assets/terraform.svg";
 import testingLibraryLogo from "@assets/testing-library.svg";
 import typescriptLogo from "@assets/typescript.svg";
 import viteLogo from "@assets/vite.svg";
@@ -51,6 +60,13 @@ function SkillsList() {
         name="django"
       />
       <AnimatedSkillItem
+        key="pytest"
+        svgSrc={pytestLogo}
+        href="https://docs.pytest.org/en/stable/"
+        alt="Logo du framework de test Pytest"
+        name="pytest"
+      />
+      <AnimatedSkillItem
         key="react-router"
         svgSrc={reactRouterLogo}
         href="https://reactrouter.com/"
@@ -72,6 +88,13 @@ function SkillsList() {
         name="tailwindcss"
       />
       <AnimatedSkillItem
+        key="storybook"
+        svgSrc={storybookLogo}
+        href="https://storybook.js.org/"
+        alt="Logo de Storybook"
+        name="storybook"
+      />
+      <AnimatedSkillItem
         key="vite"
         svgSrc={viteLogo}
         href="https://vite.dev/"
@@ -91,6 +114,55 @@ function SkillsList() {
         href="https://testing-library.com/"
         alt="Logo de la librairie de test Testing Library"
         name="testing library"
+      />
+      <AnimatedSkillItem
+        key="aws"
+        svgSrc={awsLogo}
+        href="https://aws.amazon.com/"
+        alt="Logo de AWS"
+        name="aws"
+      />
+      <AnimatedSkillItem
+        key="docker"
+        svgSrc={dockerLogo}
+        href="https://www.docker.com/"
+        alt="Logo de Docker"
+        name="docker"
+      />
+      <AnimatedSkillItem
+        key="kubernetes"
+        svgSrc={kubernetesLogo}
+        href="https://kubernetes.io/"
+        alt="Logo de Kubernetes"
+        name="kubernetes"
+      />
+      <AnimatedSkillItem
+        key="terraform"
+        svgSrc={terraformLogo}
+        href="https://developer.hashicorp.com/terraform"
+        alt="Logo de Terraform"
+        name="terraform"
+      />
+      <AnimatedSkillItem
+        key="ansible"
+        svgSrc={ansibleLogo}
+        href="https://docs.ansible.com/"
+        alt="Logo de Ansible"
+        name="ansible"
+      />
+      <AnimatedSkillItem
+        key="prometheus"
+        svgSrc={prometheusLogo}
+        href="https://prometheus.io/"
+        alt="Logo de Prometheus"
+        name="prometheus"
+      />
+      <AnimatedSkillItem
+        key="grafana"
+        svgSrc={grafanaLogo}
+        href="https://grafana.com/"
+        alt="Logo de Grafana"
+        name="grafana"
       />
     </ul>
   );

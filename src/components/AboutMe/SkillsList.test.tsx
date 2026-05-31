@@ -8,7 +8,7 @@ describe("SkillsList renders properly", () => {
 
   it("renders a list and 11 liste items", () => {
     expect(screen.getByRole("list")).toBeVisible();
-    expect(screen.getAllByRole("listitem").length).toBe(11);
+    expect(screen.getAllByRole("listitem").length).toBe(20);
   });
 
   test("each skill is represented", () => {
@@ -23,5 +23,14 @@ describe("SkillsList renders properly", () => {
     expect(screen.queryByText("vite")).toBeVisible();
     expect(screen.queryByText("vitest")).toBeVisible();
     expect(screen.queryByText("testing library")).toBeVisible();
+    expect(screen.queryByText("aws")).toBeVisible();
+    expect(screen.queryByText("docker")).toBeVisible();
+    expect(screen.queryByText("kubernetes")).toBeVisible();
+    expect(screen.queryByText("terraform")).toBeVisible();
+    expect(screen.queryByText("ansible")).toBeVisible();
+    expect(screen.queryByText("prometheus")).toBeVisible();
+    expect(screen.queryByText("grafana")).toBeVisible();
+    expect(screen.queryByText("pytest")).toBeVisible();
+    expect(screen.queryByText("storybook")).toBeVisible();
   });
 });
