@@ -61,6 +61,19 @@ function CurriculumVitaeContent() {
         Icon={BookOpen}
         experiences={[
           {
+            title: "Administrateur Système DevOps",
+            organization: "La Capsule",
+            location: "Paris",
+            startDate: new Date("2026-02-23"),
+            endDate: new Date("2026-05-04"),
+            descriptions: [
+              "Automatiser le déploiement d'une infrastructure dans le cloud  : IAC, Terraform, Ansible, AWS, réseau, sécurité...",
+              "Déployer une application en continu : Gitlab CI/CD, Docker, Kubernetes, analyse statique et de qualité, tests de montée en charge, Hadolint, Trivy, Cosign...",
+              "Superviser les services déployés : Grafana, Prometheus, AlertManager...",
+              "Projet de fin de formation : déploiement automatisé d'une application conteneurisée (Kubernetes) dans les clouds AWS et Linode, avec sécurisation et monitoring"
+            ]
+          },
+          {
             title: "Département Génie Mathématiques",
             organization: "INSA Rouen Normandie",
             location: "Saint-Étienne-du-Rouvray (Normandie)",

@@ -1,4 +1,5 @@
-import GithubInLogo from "@assets/github.svg?react";
+import GithubLogo from "@assets/github.svg?react";
+import GitlabLogo from "@assets/gitlab.svg?react";
 import LinkedInLogo from "@assets/linkedin.svg?react";
 import { Card, Divider, IconLink, Tag } from "@components/ui";
 import { render, screen } from "@testing-library/react";
@@ -102,23 +103,34 @@ describe("PresentationCard renders properly", () => {
     );
   });
 
-  it("renders 2 Icon components", () => {
-    expect(IconLink).toHaveBeenCalledTimes(2);
+  it("renders 3 Icon components", () => {
+    expect(IconLink).toHaveBeenCalledTimes(3);
 
     expect(IconLink).toHaveBeenCalledWith(
       {
         href: "https://github.com/emmaGblt",
         name: "Github",
-        Icon: GithubInLogo,
+        Icon: GithubLogo,
         className: expect.any(String)
       },
       undefined
     );
+
     expect(IconLink).toHaveBeenCalledWith(
       {
         href: "https://www.linkedin.com/in/emma-guilbault-078588183/",
         name: "LinkedIn",
         Icon: LinkedInLogo
+      },
+      undefined
+    );
+
+    expect(IconLink).toHaveBeenCalledWith(
+      {
+        href: "https://gitlab.com/emmaguilbault1504",
+        name: "Gitlab",
+        Icon: GitlabLogo,
+        className: expect.any(String)
       },
       undefined
     );

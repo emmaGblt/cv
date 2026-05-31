@@ -1,4 +1,5 @@
-import GithubInLogo from "@assets/github.svg?react";
+import GithubLogo from "@assets/github.svg?react";
+import GitlabLogo from "@assets/gitlab.svg?react";
 import LinkedInLogo from "@assets/linkedin.svg?react";
 import me from "@assets/me.jpg";
 import { Card, Divider, IconLink, Tag } from "@components/ui";
@@ -65,8 +66,14 @@ function PresentationCard() {
             <IconLink
               href="https://github.com/emmaGblt"
               name="Github"
-              Icon={GithubInLogo}
+              Icon={GithubLogo}
               className="cartoon:bg-background"
+            />
+            <IconLink
+              href="https://gitlab.com/emmaguilbault1504"
+              name="Gitlab"
+              Icon={GitlabLogo}
+              className="cartoon:bg-secondary-1"
             />
           </div>
         </div>
