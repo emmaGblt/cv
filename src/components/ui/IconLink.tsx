@@ -13,7 +13,7 @@ function IconLink({ href, name, Icon, className }: IconLinkProps) {
   return (
     <a
       className={cn(
-        "group pushButton inline-flex gap-x-1.5",
+        "group pushButton inline-flex items-center gap-x-1.5",
         "cartoon:bg-secondary-2 cartoon:border-2 cartoon:border-primary cartoon:font-semibold cartoon:shadow-sm cartoon:shadow-primary/80 cartoon:rounded-md cartoon:py-2 cartoon:px-2.5",
         "neo:p-2.5 md:neo:p-4 neo:rounded-full neo:shadow-outer-md neo:active:shadow-inner-md",
         className
