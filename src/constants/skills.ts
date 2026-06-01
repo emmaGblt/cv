@@ -1,15 +1,20 @@
 import ansibleLogo from "@assets/ansible.svg";
 import awsLogo from "@assets/aws.svg";
+import baseuiLogo from "@assets/base-ui.svg";
 import djangoLogo from "@assets/django.svg";
+import djangoRestFrameworkLogo from "@assets/django-rest-framework.svg";
 import dockerLogo from "@assets/docker.svg";
+import factoryBoyLogo from "@assets/factory-boy.svg";
 import githubLogo from "@assets/github.svg";
 import gitlabLogo from "@assets/gitlab.svg";
 import grafanaLogo from "@assets/grafana.svg";
 import javascriptLogo from "@assets/javascript.svg";
 import kubernetesLogo from "@assets/kubernetes.svg";
+import postgresqlLogo from "@assets/postgresql.svg";
 import prometheusLogo from "@assets/prometheus.svg";
 import pytestLogo from "@assets/pytest.svg";
 import pythonLogo from "@assets/python.svg";
+import radixuiLogo from "@assets/radix-ui.svg";
 import reactLogo from "@assets/react.svg";
 import reactRouterLogo from "@assets/react-router.svg";
 import storybookLogo from "@assets/storybook.svg";
@@ -64,6 +69,30 @@ export const SKILLS: Array<SKILL> = [
     name: "django"
   },
   {
+    key: "postgresql",
+    type: "backend",
+    svgSrc: postgresqlLogo,
+    href: "https://www.postgresql.org/",
+    altText: "Logo du système de BDD relationnelle PostgreSQL",
+    name: "PostgreSQL"
+  },
+  {
+    key: "django-rest-framework",
+    type: "backend",
+    svgSrc: djangoRestFrameworkLogo,
+    href: "https://www.django-rest-framework.org/",
+    altText: "Logo du framework Django REST",
+    name: "django REST"
+  },
+  {
+    key: "factory-boy",
+    type: "backend",
+    svgSrc: factoryBoyLogo,
+    href: "https://factoryboy.readthedocs.io/en/stable/",
+    altText: "Logo de Factory Boy",
+    name: "factory boy"
+  },
+  {
     key: "pytest",
     type: "backend",
     svgSrc: pytestLogo,
@@ -102,6 +131,22 @@ export const SKILLS: Array<SKILL> = [
     href: "https://tailwindcss.com/",
     altText: "Logo du framework CSS TailwindCSS",
     name: "tailwindcss"
+  },
+  {
+    key: "radix-ui",
+    type: "frontend",
+    svgSrc: radixuiLogo,
+    href: "https://www.radix-ui.com/",
+    altText: "Logo de la librairie de composants Radix UI",
+    name: "radix ui"
+  },
+  {
+    key: "base-ui",
+    type: "frontend",
+    svgSrc: baseuiLogo,
+    href: "https://base-ui.com/",
+    altText: "Logo de la librairie de composants Base UI",
+    name: "base ui"
   },
   {
     key: "storybook",
