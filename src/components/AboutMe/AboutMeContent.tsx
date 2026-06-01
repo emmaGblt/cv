@@ -9,7 +9,7 @@ function AboutMeContent() {
         Présentation
       </h3>
       <div className="flex flex-col gap-y-4 text-justify">
-        <p className="text-lg font-semibold">
+        <p className="mb-2 text-lg font-semibold italic">
           Moi c&apos;est Emma, développeuse full stack française avec{" "}
           <strong className="font-bold">5 ans d&apos;expérience</strong> dans la
           création d&apos;applications web modernes ! J&apos;aime travailler sur
