@@ -79,7 +79,7 @@ function AboutMeContent() {
       </div>
       <div className="holographic-cards-scrollbar mt-5 md:mt-8">
         <h3 className="cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold mb-2 max-w-fit text-lg md:mb-4 md:text-2xl">
-          Compétences
+          Technologies
         </h3>
         <p>
           Au fil des années, j&lsquo;ai travaillé avec différentes technologies.
