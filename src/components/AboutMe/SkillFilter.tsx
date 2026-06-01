@@ -23,11 +23,11 @@ function SkillFilter({ filter, handleFilterChange }: Props) {
   const id = useId();
 
   return (
-    <div className="mt-5 mb-1 flex items-center gap-x-2">
+    <div className="mt-6 mb-2 flex flex-wrap items-center gap-x-2 gap-y-4">
       <div id={id}>Filtre :</div>
       <RadioGroup
         aria-labelledby={id}
-        className="flex items-center gap-x-2"
+        className="flex flex-wrap items-center gap-x-2 gap-y-4"
         value={filter}
         onValueChange={(value) => handleFilterChange(value)}
       >
@@ -39,7 +39,7 @@ function SkillFilter({ filter, handleFilterChange }: Props) {
           <label
             key={filter.value}
             className={cn(
-              "pushButton px-2 py-0.5 text-xs hover:cursor-pointer",
+              "pushButton px-2 py-0.5 text-sm hover:cursor-pointer",
               "cartoon:bg-background cartoon:border-2 cartoon:border-primary cartoon:shadow-sm cartoon:shadow-primary/80 cartoon:rounded-md cartoon:font-semibold",
               "neo:rounded-3xl neo:hover:text-black/50 neo:shadow-outer-md neo:has-data-checked:shadow-inner-md neo:active:shadow-inner-md"
             )}
