@@ -29,7 +29,7 @@ function AboutMeContent() {
           l&apos;interface utilisateur au backend, en privilégiant la{" "}
           <strong className="font-bold">collaboration</strong>, la{" "}
           <strong className="font-bold">qualité du code</strong>, la{" "}
-          <strong className="font-bold">perfomance</strong> et{" "}
+          <strong className="font-bold">performance</strong> et{" "}
           <strong className="font-bold">l&apos;expérience utilisateur</strong>.
         </p>
       </div>
@@ -45,13 +45,13 @@ function AboutMeContent() {
             <strong className="font-bold">
               maintenir et développer les nouvelles fonctionnalités
             </strong>{" "}
-            d&apos;une application SaaS Djando / React en autonomie
+            d&apos;une application SaaS Django / React en autonomie
             <br />
             &nbsp;-{" "}
             <strong className="font-bold">
               concevoir et créer une application
             </strong>{" "}
-            SaaS Djando / React
+            SaaS Django / React
             <br />
             &nbsp;-{" "}
             <strong className="font-bold">
@@ -95,7 +95,7 @@ function AboutMeContent() {
             <br />
             👥 Mon esprit collaboratif et le partage des mes connaissances
             <br />
-            ♾️ Ma connaissance des pratiques Devops, de l&apos;infrastructure as
+            ♾️ Ma connaissance des pratiques DevOps, de l&apos;infrastructure as
             code, du déploiement continu, de la conteneurisation...
           </p>
         </div>
