@@ -178,7 +178,7 @@ export const SKILLS: Array<SKILL> = [
     svgSrc: testingLibraryLogo,
     href: "https://testing-library.com/",
     altText: "Logo de la librairie de test Testing Library",
-    name: "testing library"
+    name: "testing lib."
   },
   {
     key: "aws",
