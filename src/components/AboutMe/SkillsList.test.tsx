@@ -37,7 +37,7 @@ describe("SkillsList renders all the skills (no filter)", () => {
     ["tailwindcss"],
     ["vite"],
     ["vitest"],
-    ["testing library"],
+    ["testing lib."],
     ["aws"],
     ["docker"],
     ["kubernetes"],
@@ -77,7 +77,7 @@ describe("SkillsList renders properly when filtering frontend skills", () => {
     ["tailwindcss"],
     ["vite"],
     ["vitest"],
-    ["testing library"],
+    ["testing lib."],
     ["storybook"],
     ["radix ui"],
     ["base ui"]

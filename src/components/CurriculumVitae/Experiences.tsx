@@ -27,8 +27,11 @@ function Experiences({ title, experiences, Icon }: ExperiencesProps) {
         <h3 className="text-lg font-bold md:text-2xl">{title}</h3>
       </div>
       <ol className="flex flex-col gap-y-4 md:gap-y-5">
-        {experiences.map((experience) => (
-          <ExperienceListItem {...experience} key={experience.title} />
+        {experiences.map((experience, item) => (
+          <ExperienceListItem
+            {...experience}
+            key={`${item}-${experience.title}`}
+          />
         ))}
       </ol>
     </div>

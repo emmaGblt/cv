@@ -23,7 +23,7 @@ function SkillFilter({ filter, handleFilterChange }: Props) {
   const id = useId();
 
   return (
-    <div className="mt-6 mb-2 flex flex-wrap items-center gap-x-2 gap-y-4">
+    <div className="mt-6 mb-1 flex flex-wrap items-center gap-x-2 gap-y-4">
       <div id={id}>Filtre :</div>
       <RadioGroup
         aria-labelledby={id}
