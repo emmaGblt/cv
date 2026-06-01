@@ -51,8 +51,10 @@ function SkillFilter({ filter, handleFilterChange }: Props) {
       </RadioGroup>
       {filter != "none" && (
         <button
+          role="button"
           className="neo:text-black/50 cartoon:text-primary ml-2 hover:cursor-pointer"
           onClick={() => handleFilterChange("none")}
+          aria-label="delete-filter"
         >
           <Eraser className="size-5" />
         </button>
