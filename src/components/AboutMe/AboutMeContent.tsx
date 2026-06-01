@@ -35,13 +35,13 @@ function AboutMeContent() {
         </h3>
         <div className="flex flex-col gap-y-4 text-justify">
           <p>
-            Dans mon parcours, j'ai été amenée à :
+            Dans mon parcours, j&lsquo;ai été amenée à :
             <br />
             &nbsp;-{" "}
             <strong className="font-bold">
               maintenir et développer les nouvelles fonctionnalités
             </strong>{" "}
-            d'une application SaaS Djando / React en autonomie
+            d&lsquo;une application SaaS Djando / React en autonomie
             <br />
             &nbsp;-{" "}
             <strong className="font-bold">
