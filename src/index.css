@@ -128,10 +128,15 @@
   .pushButton {
     transition-property: transform, box-shadow;
     transition-duration: 100ms;
-  }
 
-  .pushButton:hover {
-    transform: translateX(4px) translateY(4px);
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    &:hover {
+      transform: translateX(4px) translateY(4px);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    }
+
+    &:has([data-checked]) {
+      transform: translateX(4px) translateY(4px);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    }
   }
 }

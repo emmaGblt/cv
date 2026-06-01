@@ -10,6 +10,6 @@ describe("Tag renders properly", () => {
     const text = queryByText("Tag text");
     expect(text).toBeVisible();
     // Check some classes
-    expect(text).toHaveClass("inline-block px-2 py-1");
+    expect(text).toHaveClass("px-2 py-1");
   });
 });

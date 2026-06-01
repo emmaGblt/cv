@@ -44,7 +44,7 @@ describe("CardWithTabs renders properly", () => {
     expect(tabs.length).toBe(3);
     expect(within(tabs[0]).queryByText("Tab 1")).toBeVisible();
     expect(within(tabs[1]).queryByText("Tab 2")).toBeVisible();
-    expect(tabs[1]).toHaveAttribute("data-selected"); // tab2 is the default value
+    expect(tabs[1]).toHaveAttribute("data-active"); // tab2 is the default value
     expect(within(tabs[2]).queryByText("Tab 3")).toBeVisible();
   });
 

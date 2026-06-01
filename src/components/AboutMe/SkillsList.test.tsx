@@ -1,36 +1,144 @@
 import { render, screen } from "@testing-library/react";
+import userEvent, { type UserEvent } from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, test } from "vitest";
+
+import type { SKILL_TYPE } from "@/types/skills";
 
 import SkillsList from "./SkillsList";
 
-describe("SkillsList renders properly", () => {
+async function clickOnFilter(user: UserEvent, filter: SKILL_TYPE) {
+  const radioInput = screen.getByLabelText(filter, {
+    selector: "input"
+  }) as HTMLInputElement;
+
+  expect(radioInput.nodeName).toBe("INPUT");
+  expect(radioInput.type).toBe("radio");
+
+  await user.click(radioInput);
+}
+
+describe("SkillsList renders all the skills (no filter)", () => {
   beforeEach(() => render(<SkillsList />));
 
-  it("renders a list and 11 liste items", () => {
+  it("renders a list and 26 list items", () => {
     expect(screen.getByRole("list")).toBeVisible();
-    expect(screen.getAllByRole("listitem").length).toBe(20);
+    expect(screen.getAllByRole("listitem").length).toBe(26);
   });
 
-  test("each skill is represented", () => {
-    expect(screen.queryByText("javascript")).toBeVisible();
-    expect(screen.queryByText("typescript")).toBeVisible();
-    expect(screen.queryByText("react")).toBeVisible();
-    expect(screen.queryByText("python")).toBeVisible();
-    expect(screen.queryByText("django")).toBeVisible();
-    expect(screen.queryByText("react router")).toBeVisible();
-    expect(screen.queryByText("github")).toBeVisible();
-    expect(screen.queryByText("tailwindcss")).toBeVisible();
-    expect(screen.queryByText("vite")).toBeVisible();
-    expect(screen.queryByText("vitest")).toBeVisible();
-    expect(screen.queryByText("testing library")).toBeVisible();
-    expect(screen.queryByText("aws")).toBeVisible();
-    expect(screen.queryByText("docker")).toBeVisible();
-    expect(screen.queryByText("kubernetes")).toBeVisible();
-    expect(screen.queryByText("terraform")).toBeVisible();
-    expect(screen.queryByText("ansible")).toBeVisible();
-    expect(screen.queryByText("prometheus")).toBeVisible();
-    expect(screen.queryByText("grafana")).toBeVisible();
-    expect(screen.queryByText("pytest")).toBeVisible();
-    expect(screen.queryByText("storybook")).toBeVisible();
+  test.each([
+    ["javascript"],
+    ["typescript"],
+    ["react"],
+    ["python"],
+    ["django"],
+    ["react router"],
+    ["github"],
+    ["gitlab"],
+    ["tailwindcss"],
+    ["vite"],
+    ["vitest"],
+    ["testing library"],
+    ["aws"],
+    ["docker"],
+    ["kubernetes"],
+    ["terraform"],
+    ["ansible"],
+    ["prometheus"],
+    ["grafana"],
+    ["pytest"],
+    ["storybook"],
+    ["PostgreSQL"],
+    ["django REST"],
+    ["factory boy"],
+    ["radix ui"],
+    ["base ui"]
+  ])("%s is visible", (skill) => {
+    expect(screen.queryByText(skill)).toBeVisible();
+  });
+});
+
+describe("SkillsList renders properly when filtering frontend skills", () => {
+  const user = userEvent.setup();
+
+  beforeEach(() => render(<SkillsList />));
+
+  it("returns the correct number of skills", async () => {
+    await clickOnFilter(user, "frontend");
+
+    expect(screen.getByRole("list")).toBeVisible();
+    expect(screen.getAllByRole("listitem").length).toBe(11);
+  });
+
+  test.each([
+    ["javascript"],
+    ["typescript"],
+    ["react"],
+    ["react router"],
+    ["tailwindcss"],
+    ["vite"],
+    ["vitest"],
+    ["testing library"],
+    ["storybook"],
+    ["radix ui"],
+    ["base ui"]
+  ])("%s is visible", async (skill) => {
+    await clickOnFilter(user, "frontend");
+
+    expect(screen.queryByText(skill)).toBeVisible();
+  });
+});
+
+describe("SkillsList renders properly when filtering backend skills", () => {
+  const user = userEvent.setup();
+
+  beforeEach(() => render(<SkillsList />));
+
+  it("returns the correct number of skills", async () => {
+    await clickOnFilter(user, "backend");
+
+    expect(screen.getByRole("list")).toBeVisible();
+    expect(screen.getAllByRole("listitem").length).toBe(6);
+  });
+
+  test.each([
+    ["python"],
+    ["django"],
+    ["pytest"],
+    ["PostgreSQL"],
+    ["django REST"],
+    ["factory boy"]
+  ])("%s is visible", async (skill) => {
+    await clickOnFilter(user, "backend");
+
+    expect(screen.queryByText(skill)).toBeVisible();
+  });
+});
+
+describe("SkillsList renders properly when filtering devops skills", () => {
+  const user = userEvent.setup();
+
+  beforeEach(() => render(<SkillsList />));
+
+  it("returns the correct number of skills", async () => {
+    await clickOnFilter(user, "devops");
+
+    expect(screen.getByRole("list")).toBeVisible();
+    expect(screen.getAllByRole("listitem").length).toBe(9);
+  });
+
+  test.each([
+    ["github"],
+    ["gitlab"],
+    ["aws"],
+    ["docker"],
+    ["kubernetes"],
+    ["terraform"],
+    ["ansible"],
+    ["prometheus"],
+    ["grafana"]
+  ])("%s is visible", async (skill) => {
+    await clickOnFilter(user, "devops");
+
+    expect(screen.queryByText(skill)).toBeVisible();
   });
 });
