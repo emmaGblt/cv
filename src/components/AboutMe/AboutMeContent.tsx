@@ -10,16 +10,16 @@ function AboutMeContent() {
       </h3>
       <div className="flex flex-col gap-y-4 text-justify">
         <p>
-          Développeuse full stack avec{" "}
+          Moi c&lsquo;est Emma, développeuse full stack avec{" "}
           <strong className="font-bold">5 ans d&lsquo;expérience</strong> dans
           la création d&lsquo;applications web{" "}
           <strong className="font-bold">
-            scalables et centrées sur l&lsquo;utilisateur
-          </strong>
-          .
+            scalables et centrées sur leurs utilisateurs
+          </strong>{" "}
+          !
         </p>
         <p>
-          Je conçois et développe des applications robustes, de
+          Je conçois et développe des applications robustes et intuitives, de
           l&lsquo;interface utilisateur à l&lsquo;architecture backend, en
           privilégiant la <strong className="font-bold">collaboration</strong>,
           la <strong className="font-bold">qualité du code</strong>, la{" "}
