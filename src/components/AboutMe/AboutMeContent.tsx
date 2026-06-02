@@ -1,13 +1,13 @@
 import "./index.css";
 
+import Heading from "@ui/Typography/Heading";
+
 import SkillsList from "./SkillsList";
 
 function AboutMeContent() {
   return (
     <div>
-      <h3 className="cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold mb-2 max-w-fit text-lg md:mb-4 md:text-2xl">
-        Présentation
-      </h3>
+      <Heading level="3">Présentation</Heading>
       <div className="flex flex-col gap-y-4 text-justify">
         <p className="mb-2 text-lg font-semibold italic">
           Moi c&apos;est Emma, développeuse full stack française avec{" "}
@@ -34,9 +34,7 @@ function AboutMeContent() {
         </p>
       </div>
       <div className="mt-5 md:mt-8">
-        <h3 className="cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold mb-2 max-w-fit text-lg md:mb-4 md:text-2xl">
-          Projets
-        </h3>
+        <Heading level="3">Projets</Heading>
         <div className="flex flex-col gap-y-4 text-justify">
           <p>
             Dans mon parcours, j&apos;ai été amenée à :
@@ -87,9 +85,7 @@ function AboutMeContent() {
         </div>
       </div>
       <div className="mt-5 md:mt-8">
-        <h3 className="cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold mb-2 max-w-fit text-lg md:mb-4 md:text-2xl">
-          Ce que j&apos;apporte à mon équipe
-        </h3>
+        <Heading level="3">Ce que j&apos;apporte à mon équipe</Heading>
         <div className="flex flex-col gap-y-4 text-justify">
           <p>
             💪 Mes 5 ans d&apos;expérience en développement full stack
@@ -106,14 +102,11 @@ function AboutMeContent() {
         </div>
       </div>
       <div className="holographic-cards-scrollbar mt-5 md:mt-8">
-        <h3 className="cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold mb-2 max-w-fit text-lg md:mb-4 md:text-2xl">
-          Technologies
-        </h3>
+        <Heading level="3">Technologies</Heading>
         <p>
           Au fil des années, j&apos;ai travaillé avec différentes technologies.
           En voici quelques-unes !
         </p>
-
         <SkillsList />
       </div>
     </div>

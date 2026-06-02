@@ -3,5 +3,5 @@
 export default {
   trailingComma: "none",
   plugins: ["prettier-plugin-tailwindcss"],
-  tailwindFunctions: ["cn"]
+  tailwindFunctions: ["cn", "cva"]
 };
