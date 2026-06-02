@@ -1,5 +1,6 @@
 import "./index.css";
 
+import Bold from "@ui/Typography/Bold";
 import Heading from "@ui/Typography/Heading";
 
 import SkillsList from "./SkillsList";
@@ -11,26 +12,24 @@ function AboutMeContent() {
       <div className="flex flex-col gap-y-4 text-justify">
         <p className="mb-2 text-lg font-semibold italic">
           Moi c&apos;est Emma, développeuse full stack française avec{" "}
-          <strong className="font-bold">5 ans d&apos;expérience</strong> dans la
-          création d&apos;applications web modernes ! J&apos;aime travailler sur
-          des projets <strong className="font-bold">impactants</strong> et{" "}
-          <strong className="font-bold">engagés !</strong>
+          <Bold>5 ans d&apos;expérience</Bold> dans la création
+          d&apos;applications web modernes ! J&apos;aime travailler sur des
+          projets <Bold>impactants</Bold> et <Bold>engagés !</Bold>
         </p>
         <p>
           Je conçois et développe des applications web{" "}
-          <strong className="font-bold">
+          <Bold>
             intuitives, maintenables et centrées sur leurs utilisateurs
-          </strong>{" "}
+          </Bold>{" "}
           en utilisant des technologies modernes et reconnues comme React,
           Typescript, Python, Django...
         </p>
         <p>
           J&apos;interviens sur l&apos;ensemble du cycle de développement, de
           l&apos;interface utilisateur au backend, en privilégiant la{" "}
-          <strong className="font-bold">collaboration</strong>, la{" "}
-          <strong className="font-bold">qualité du code</strong>, la{" "}
-          <strong className="font-bold">performance</strong> et{" "}
-          <strong className="font-bold">l&apos;expérience utilisateur</strong>.
+          <Bold>collaboration</Bold>, la <Bold>qualité du code</Bold>, la{" "}
+          <Bold>performance</Bold> et <Bold>l&apos;expérience utilisateur</Bold>
+          .
         </p>
       </div>
       <div className="mt-5 md:mt-8">
@@ -40,47 +39,34 @@ function AboutMeContent() {
             Dans mon parcours, j&apos;ai été amenée à :
             <br />
             &nbsp;-{" "}
-            <strong className="font-bold">
+            <Bold>
               maintenir et développer les nouvelles fonctionnalités
-            </strong>{" "}
+            </Bold>{" "}
             d&apos;une application SaaS Django / React en autonomie
             <br />
-            &nbsp;-{" "}
-            <strong className="font-bold">
-              concevoir et créer une application
-            </strong>{" "}
-            SaaS Django / React
+            &nbsp;- <Bold>concevoir et créer une application</Bold> SaaS Django
+            / React
             <br />
-            &nbsp;-{" "}
-            <strong className="font-bold">
-              créer et maintenir un design system
-            </strong>{" "}
-            et une{" "}
-            <strong className="font-bold">librairie de composants</strong>
+            &nbsp;- <Bold>créer et maintenir un design system</Bold> et une{" "}
+            <Bold>librairie de composants</Bold>
             <br />
-            &nbsp;- <strong className="font-bold">
-              migrer des interfaces
-            </strong>{" "}
-            vers des technologies Javascript modernes
+            &nbsp;- <Bold>migrer des interfaces</Bold> vers des technologies
+            Javascript modernes
             <br />
-            &nbsp;-{" "}
-            <strong className="font-bold">accompagner et conseiller</strong> des
-            développeurs moins expérimentés en Django et React
+            &nbsp;- <Bold>accompagner et conseiller</Bold> des développeurs
+            moins expérimentés en Django et React
           </p>
           <p>
             J’ai travaillé au sein d’équipes pluridisciplinaires, en{" "}
-            <strong className="font-bold">collaboration</strong> avec des
-            Product Manager, des Designer et d’autres développeurs, sur des
-            cycles de développement courts et itératifs.
+            <Bold>collaboration</Bold> avec des Product Manager, des Designer et
+            d’autres développeurs, sur des cycles de développement courts et
+            itératifs.
           </p>
           <p>
-            J’ai réalisé quotidiennement des{" "}
-            <strong className="font-bold">reviews de code</strong> et participé
-            à des sessions de{" "}
-            <strong className="font-bold">peer programming</strong> et de{" "}
-            <strong className="font-bold">conception</strong>, toujours avec le
-            souci de mettre mon expérience et mes connaissances au service de
-            l’équipe.
+            J’ai réalisé quotidiennement des <Bold>reviews de code</Bold> et
+            participé à des sessions de <Bold>peer programming</Bold> et de{" "}
+            <Bold>conception</Bold>, toujours avec le souci de mettre mon
+            expérience et mes connaissances au service de l’équipe.
           </p>
         </div>
       </div>
