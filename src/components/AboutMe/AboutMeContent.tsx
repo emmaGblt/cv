@@ -2,8 +2,22 @@ import "./index.css";
 
 import Bold from "@ui/Typography/Bold";
 import Heading from "@ui/Typography/Heading";
+import {
+  BicepsFlexed,
+  BrickWall,
+  Infinity as LucideInfinity,
+  Laptop,
+  type LucideIcon,
+  UsersRound
+} from "lucide-react";
 
 import SkillsList from "./SkillsList";
+
+function WhatIBringIcon({ Icon }: { Icon: LucideIcon }) {
+  return (
+    <Icon className="neo:text-secondary-2 cartoon:text-primary cartoon:group-even:fill-secondary-2 cartoon:group-odd:fill-background mb-0.5 inline-block size-5" />
+  );
+}
 
 function AboutMeContent() {
   return (
@@ -73,18 +87,30 @@ function AboutMeContent() {
       <div className="mt-5 md:mt-8">
         <Heading level="3">Ce que j&apos;apporte à mon équipe</Heading>
         <div className="flex flex-col gap-y-4 text-justify">
-          <p>
-            💪 Mes 5 ans d&apos;expérience en développement full stack
-            <br />
-            💻 Mon expertise en développement backend et frontend
-            <br />
-            🧱 Ma rigueur et mon souci de la qualité du code
-            <br />
-            👥 Mon esprit collaboratif et le partage des mes connaissances
-            <br />
-            ♾️ Ma connaissance des pratiques DevOps, de l&apos;infrastructure as
-            code, du déploiement continu, de la conteneurisation...
-          </p>
+          <ul>
+            <li className="group">
+              <WhatIBringIcon Icon={BicepsFlexed} />
+              &nbsp; Mes 5 ans d&apos;expérience en développement full stack
+            </li>
+            <li className="group">
+              <WhatIBringIcon Icon={Laptop} />
+              &nbsp; Mon expertise en développement backend et frontend
+            </li>
+            <li className="group">
+              <WhatIBringIcon Icon={BrickWall} />
+              &nbsp; Ma rigueur et mon souci de la qualité du code
+            </li>
+            <li className="group">
+              <WhatIBringIcon Icon={UsersRound} />
+              &nbsp; Mon esprit collaboratif et le partage des mes connaissances
+            </li>
+            <li className="group">
+              <WhatIBringIcon Icon={LucideInfinity} />
+              &nbsp; Ma connaissance des pratiques DevOps, de
+              l&apos;infrastructure as code, du déploiement continu, de la
+              conteneurisation...
+            </li>
+          </ul>
         </div>
       </div>
       <div className="holographic-cards-scrollbar mt-5 md:mt-8">
