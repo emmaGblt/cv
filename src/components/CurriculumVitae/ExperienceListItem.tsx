@@ -1,5 +1,7 @@
 import "./index.css";
 
+import Heading from "@ui/Typography/Heading";
+
 import type { TExperience } from "@/types";
 import { getStringPeriod } from "@/utils/date";
 
@@ -25,7 +27,7 @@ function ExperienceListItem({
       className="experience-list-item relative"
     >
       <div className="ml-9 md:ml-14.5">
-        <h4 className="font-bold md:text-lg">{title}</h4>
+        <Heading level="4">{title}</Heading>
         <div className="cartoon:text-primary/80">
           {organization}
           <span>&nbsp;-&nbsp;</span>
