@@ -75,9 +75,10 @@ function AboutMeContent() {
             J’ai réalisé quotidiennement des{" "}
             <strong className="font-bold">reviews de code</strong> et participé
             à des sessions de{" "}
-            <strong className="font-bold">peer programming</strong> et de
-            conception, toujours avec le souci de mettre mon expérience et mes
-            connaissances au service de l’équipe.
+            <strong className="font-bold">peer programming</strong> et de{" "}
+            <strong className="font-bold">conception</strong>, toujours avec le
+            souci de mettre mon expérience et mes connaissances au service de
+            l’équipe.
           </p>
         </div>
       </div>
