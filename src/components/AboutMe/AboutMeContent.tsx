@@ -64,6 +64,10 @@ function AboutMeContent() {
               migrer des interfaces
             </strong>{" "}
             vers des technologies Javascript modernes
+            <br />
+            &nbsp;-{" "}
+            <strong className="font-bold">accompagner et conseiller</strong> des
+            développeurs moins expérimentés en Django et React
           </p>
           <p>
             J’ai travaillé au sein d’équipes pluridisciplinaires, en{" "}
