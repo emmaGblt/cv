@@ -1,8 +1,6 @@
 import type { PropsWithChildren } from "react";
 
-type Props = PropsWithChildren;
-
-function Bold({ children }: Props) {
+function Bold({ children }: PropsWithChildren) {
   return <strong className="font-bold">{children}</strong>;
 }
 
