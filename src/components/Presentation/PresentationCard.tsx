@@ -3,6 +3,7 @@ import GitlabLogo from "@assets/gitlab.svg?react";
 import LinkedInLogo from "@assets/linkedin.svg?react";
 import me from "@assets/me.jpg";
 import { Card, Divider, IconLink, Tag } from "@components/ui";
+import Heading from "@ui/Typography/Heading";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { cn } from "@/utils/classes";
@@ -24,9 +25,9 @@ function PresentationCard() {
             alt="Une photo de ma chienne Pichu et moi"
           />
           <div className="flex flex-col items-start xl:items-center">
-            <h1 className="cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold mb-1.5 text-2xl md:mb-3 md:text-4xl xl:text-center">
+            <Heading level="1" className="xl:text-center">
               Emma Guilbault
-            </h1>
+            </Heading>
             <Tag text="Développeuse full stack" className="hidden sm:block" />
             <Tag text="Dev. full stack" className="block sm:hidden" />
           </div>

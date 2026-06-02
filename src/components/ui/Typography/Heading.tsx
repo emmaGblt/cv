@@ -16,7 +16,7 @@ const headingVariants = cva(
   {
     variants: {
       level: {
-        "1": "mb-1.5 text-2xl md:mb-3 md:text-4xl xl:text-center",
+        "1": "mb-1.5 text-2xl md:mb-3 md:text-4xl",
         "2": "mb-4 max-w-fit text-xl md:text-3xl",
         "3": "mb-2 max-w-fit text-lg md:mb-4 md:text-2xl"
       }

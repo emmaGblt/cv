@@ -1,3 +1,4 @@
+import Heading from "@ui/Typography/Heading";
 import { type LucideIcon } from "lucide-react";
 
 import type { TExperience } from "@/types";
@@ -24,7 +25,9 @@ function Experiences({ title, experiences, Icon }: ExperiencesProps) {
         >
           <Icon className="size-3 md:size-5" />
         </span>
-        <h3 className="text-lg font-bold md:text-2xl">{title}</h3>
+        <Heading level="3" className="mb-0!">
+          {title}
+        </Heading>
       </div>
       <ol className="flex flex-col gap-y-4 md:gap-y-5">
         {experiences.map((experience, item) => (
