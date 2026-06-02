@@ -3,7 +3,7 @@ import type { ElementType, PropsWithChildren } from "react";
 
 import { cn } from "@/utils/classes";
 
-type HeadingLevel = "1" | "2" | "3" | "4";
+export type HeadingLevel = "1" | "2" | "3" | "4";
 
 const tags: Record<HeadingLevel, ElementType> = {
   1: "h1",
