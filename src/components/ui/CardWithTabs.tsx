@@ -1,4 +1,5 @@
 import { Tabs as BaseUiTabs } from "@base-ui/react/tabs";
+import Heading from "@ui/Typography/Heading";
 import { type ComponentProps, use } from "react";
 
 import { ThemeContext } from "@/contexts/ThemeContext";
@@ -49,9 +50,7 @@ function CardWithTabs({ defaultValue, tabs }: CardWithTabsProps) {
         </BaseUiTabs.List>
         {tabs.map((tab) => (
           <BaseUiTabs.Panel value={tab.value} key={`panel-${tab.value}`}>
-            <h2 className="cartoon-title cartoon:text-shadow-md cartoon:text-shadow-primary neo:font-bold mb-4 max-w-fit text-xl md:text-3xl">
-              {tab.title}
-            </h2>
+            <Heading level="2">{tab.title}</Heading>
             <Divider
               className="mb-8 w-1/6 xl:w-1/8"
               type={theme === "cartoon" ? "thick" : "thin"}
