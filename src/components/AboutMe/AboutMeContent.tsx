@@ -10,13 +10,18 @@ import {
   type LucideIcon,
   UsersRound
 } from "lucide-react";
+import type { PropsWithChildren } from "react";
 
 import SkillsList from "./SkillsList";
 
 function WhatIBringIcon({ Icon }: { Icon: LucideIcon }) {
   return (
-    <Icon className="neo:text-secondary-2 cartoon:text-primary cartoon:group-even:fill-secondary-2 cartoon:group-odd:fill-background mb-0.5 inline-block size-5" />
+    <Icon className="neo:text-secondary-2 cartoon:text-primary cartoon:group-even:fill-secondary-2 cartoon:group-odd:fill-background inline-block size-5" />
   );
+}
+
+function WhatIBrinListItem({ children }: PropsWithChildren) {
+  return <li className="group wrap flex items-center gap-x-3">{children}</li>;
 }
 
 function AboutMeContent() {
@@ -87,29 +92,30 @@ function AboutMeContent() {
       <div className="mt-5 md:mt-8">
         <Heading level="3">Ce que j&apos;apporte à mon équipe</Heading>
         <div className="flex flex-col gap-y-4 text-justify">
-          <ul>
-            <li className="group">
+          <ul className="flex flex-col gap-y-1 lg:gap-y-2">
+            <WhatIBrinListItem>
               <WhatIBringIcon Icon={BicepsFlexed} />
-              &nbsp; Mes 5 ans d&apos;expérience en développement full stack
-            </li>
-            <li className="group">
+              <p>Mes 5 ans d&apos;expérience en développement full stack</p>
+            </WhatIBrinListItem>
+            <WhatIBrinListItem>
               <WhatIBringIcon Icon={Laptop} />
-              &nbsp; Mon expertise en développement backend et frontend
-            </li>
-            <li className="group">
+              <p>Mon expertise en développement backend et frontend</p>
+            </WhatIBrinListItem>
+            <WhatIBrinListItem>
               <WhatIBringIcon Icon={BrickWall} />
-              &nbsp; Ma rigueur et mon souci de la qualité du code
-            </li>
-            <li className="group">
+              <p>Ma rigueur et mon souci de la qualité du code</p>
+            </WhatIBrinListItem>
+            <WhatIBrinListItem>
               <WhatIBringIcon Icon={UsersRound} />
-              &nbsp; Mon esprit collaboratif et le partage des mes connaissances
-            </li>
-            <li className="group">
+              <p>Mon esprit collaboratif et le partage des mes connaissances</p>
+            </WhatIBrinListItem>
+            <WhatIBrinListItem>
               <WhatIBringIcon Icon={LucideInfinity} />
-              &nbsp; Ma connaissance des pratiques DevOps, de
-              l&apos;infrastructure as code, du déploiement continu, de la
-              conteneurisation...
-            </li>
+              <p>
+                Ma connaissance des pratiques DevOps, de l&apos;IAC, de la
+                CI/CD, de la conteneurisation...
+              </p>
+            </WhatIBrinListItem>
           </ul>
         </div>
       </div>
