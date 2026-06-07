@@ -16,12 +16,14 @@ import SkillsList from "./SkillsList";
 
 function WhatIBringIcon({ Icon }: { Icon: LucideIcon }) {
   return (
-    <Icon className="neo:text-secondary-2 cartoon:text-primary cartoon:group-even:fill-secondary-2 cartoon:group-odd:fill-background inline-block size-5" />
+    <span className="min-w-6 text-left">
+      <Icon className="neo:text-secondary-2 cartoon:text-primary cartoon:group-even:fill-secondary-2 cartoon:group-odd:fill-background inline-block size-5" />
+    </span>
   );
 }
 
 function WhatIBrinListItem({ children }: PropsWithChildren) {
-  return <li className="group wrap flex items-center gap-x-3">{children}</li>;
+  return <li className="group wrap flex items-center gap-x-2">{children}</li>;
 }
 
 function AboutMeContent() {
@@ -91,33 +93,31 @@ function AboutMeContent() {
       </div>
       <div className="mt-5 md:mt-8">
         <Heading level="3">Ce que j&apos;apporte à mon équipe</Heading>
-        <div className="flex flex-col gap-y-4 text-justify">
-          <ul className="flex flex-col gap-y-1 lg:gap-y-2">
-            <WhatIBrinListItem>
-              <WhatIBringIcon Icon={BicepsFlexed} />
-              <p>Mes 5 ans d&apos;expérience en développement full stack</p>
-            </WhatIBrinListItem>
-            <WhatIBrinListItem>
-              <WhatIBringIcon Icon={Laptop} />
-              <p>Mon expertise en développement backend et frontend</p>
-            </WhatIBrinListItem>
-            <WhatIBrinListItem>
-              <WhatIBringIcon Icon={BrickWall} />
-              <p>Ma rigueur et mon souci de la qualité du code</p>
-            </WhatIBrinListItem>
-            <WhatIBrinListItem>
-              <WhatIBringIcon Icon={UsersRound} />
-              <p>Mon esprit collaboratif et le partage des mes connaissances</p>
-            </WhatIBrinListItem>
-            <WhatIBrinListItem>
-              <WhatIBringIcon Icon={LucideInfinity} />
-              <p>
-                Ma connaissance des pratiques DevOps, de l&apos;IAC, de la
-                CI/CD, de la conteneurisation...
-              </p>
-            </WhatIBrinListItem>
-          </ul>
-        </div>
+        <ul className="flex flex-col gap-y-1 text-justify lg:gap-y-2">
+          <WhatIBrinListItem>
+            <WhatIBringIcon Icon={BicepsFlexed} />
+            <p>Mes 5 ans d&apos;expérience en développement full stack</p>
+          </WhatIBrinListItem>
+          <WhatIBrinListItem>
+            <WhatIBringIcon Icon={Laptop} />
+            <p>Mon expertise en développement backend et frontend</p>
+          </WhatIBrinListItem>
+          <WhatIBrinListItem>
+            <WhatIBringIcon Icon={BrickWall} />
+            <p>Ma rigueur et mon souci de la qualité du code</p>
+          </WhatIBrinListItem>
+          <WhatIBrinListItem>
+            <WhatIBringIcon Icon={UsersRound} />
+            <p>Mon esprit collaboratif et le partage des mes connaissances</p>
+          </WhatIBrinListItem>
+          <WhatIBrinListItem>
+            <WhatIBringIcon Icon={LucideInfinity} />
+            <p>
+              Ma connaissance des pratiques DevOps, de l&apos;IAC, de la CI/CD,
+              de la conteneurisation...
+            </p>
+          </WhatIBrinListItem>
+        </ul>
       </div>
       <div className="holographic-cards-scrollbar mt-5 md:mt-8">
         <Heading level="3">Technologies</Heading>
