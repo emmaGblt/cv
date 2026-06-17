@@ -2,7 +2,7 @@ import type { TExperience } from "@/types";
 
 export const PROFESSIONAL_EXPERIENCES: TExperience[] = [
   {
-    title: "Développeuse font-end",
+    title: "Développeuse front-end",
     organization: "Carbo",
     location: "Normandie (remote)",
     startDate: new Date("2024-08-01"),
@@ -83,7 +83,7 @@ export const EDUCATION: TExperience[] = [
     showOnlyDateYear: true,
     descriptions: [
       "Section Internationale Bilingue",
-      "Section Théâtres-Études",
+      "Section Théâtre-Études",
       "Bourse d'excellence de la Fondation Francis Bouygues",
       "Bourse Lumières des Cités du CRIJ Normandie Rouen",
       "Bourse au mérite du CROUS"
