@@ -47,17 +47,17 @@ The app will be available at the URL printed in your terminal (by default http:/
 
 ### Available scripts
 
-| Command             | Description                                      |
-| ------------------- | ------------------------------------------------ |
-| `yarn dev`          | Start the Vite development server                |
-| `yarn build`        | Type-check and build for production              |
-| `yarn preview`      | Preview the production build locally             |
-| `yarn test`         | Run the test suite with Vitest                   |
-| `yarn lint`         | Lint the codebase with ESLint                    |
-| `yarn lint:fix`     | Lint and automatically fix issues                |
-| `yarn format`       | Format the codebase with Prettier                |
-| `yarn format:check` | Check formatting without writing changes         |
-| `yarn typecheck`    | Run the TypeScript type checker                  |
+| Command             | Description                              |
+| ------------------- | ---------------------------------------- |
+| `yarn dev`          | Start the Vite development server        |
+| `yarn build`        | Type-check and build for production      |
+| `yarn preview`      | Preview the production build locally     |
+| `yarn test`         | Run the test suite with Vitest           |
+| `yarn lint`         | Lint the codebase with ESLint            |
+| `yarn lint:fix`     | Lint and automatically fix issues        |
+| `yarn format`       | Format the codebase with Prettier        |
+| `yarn format:check` | Check formatting without writing changes |
+| `yarn typecheck`    | Run the TypeScript type checker          |
 
 ## Where?
 
