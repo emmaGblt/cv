@@ -50,7 +50,7 @@ function AboutMeContent() {
               {PROJECTS.map((project, index) => (
                 <ListItem key={`project-${index}`}>
                   <ListIcon Icon={project.Icon} />
-                  {project.content}
+                  <p>{project.content}</p>
                 </ListItem>
               ))}
             </List>
@@ -65,7 +65,7 @@ function AboutMeContent() {
           {WHAT_I_BRING.map((item, index) => (
             <ListItem key={`what-i-bring-${index}`}>
               <ListIcon Icon={item.Icon} />
-              {item.content}
+              <p>{item.content}</p>
             </ListItem>
           ))}
         </List>
