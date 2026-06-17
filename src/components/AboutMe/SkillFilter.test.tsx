@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, test, vi } from "vitest";
 
-import type { SKILL_TYPE } from "@/types/skills";
+import type { TSKILL_TYPE } from "@/types/skills";
 
 import SkillFilter from "./SkillFilter";
 
@@ -56,7 +56,7 @@ describe("SkillFilter filter", () => {
     (filterValue, filterName) => {
       const { getByLabelText } = render(
         <SkillFilter
-          filter={filterValue as SKILL_TYPE}
+          filter={filterValue as TSKILL_TYPE}
           handleFilterChange={mockedHandleFilterChange}
         />
       );

@@ -1,12 +1,12 @@
-type SKILL_TYPE = "frontend" | "backend" | "devops";
+type TSKILL_TYPE = "frontend" | "backend" | "devops";
 
-type SKILL = {
+type TSKILL = {
   key: string;
-  type: SKILL_TYPE;
+  type: TSKILL_TYPE;
   svgSrc: string;
   href: string;
   altText: string;
   name: string;
 };
 
-export type { SKILL, SKILL_TYPE };
+export type { TSKILL, TSKILL_TYPE };
