@@ -79,7 +79,7 @@ export const WHAT_I_BRING: AboutMeList = [
   },
   {
     Icon: UsersRound,
-    content: "Mon esprit collaboratif et le partage des mes connaissances"
+    content: "Mon esprit collaboratif et le partage de mes connaissances"
   },
   {
     Icon: LucideInfinity,
