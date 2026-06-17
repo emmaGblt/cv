@@ -1,11 +1,10 @@
 import "./index.css";
 
-import Bold from "@ui/Typography/Bold";
 import Heading from "@ui/Typography/Heading";
 import { type LucideIcon } from "lucide-react";
 import type { PropsWithChildren } from "react";
 
-import { PROJECTS, WHAT_I_BRING } from "@/constants/aboutMe";
+import { ABOUT_ME_TEXT, PROJECTS, WHAT_I_BRING } from "@/constants/aboutMe";
 
 import SkillsList from "./SkillsList";
 
@@ -30,77 +29,50 @@ function ListItem({ children }: PropsWithChildren) {
 }
 
 function AboutMeContent() {
+  const { presentation, projects, whatIBring, technologies } = ABOUT_ME_TEXT;
+
   return (
     <div>
-      <Heading level="3">Présentation</Heading>
+      <Heading level="3">{presentation.heading}</Heading>
       <div className="flex flex-col gap-y-4 text-justify">
         <p className="mb-2 text-lg font-semibold italic">
-          Moi c&apos;est Emma, développeuse full stack française avec{" "}
-          <Bold>5 ans d&apos;expérience</Bold> dans la création
-          d&apos;applications web modernes ! J&apos;aime travailler sur des
-          projets <Bold>impactants</Bold> et <Bold>engagés !</Bold>
+          {presentation.intro}
         </p>
-        <p>
-          Je conçois et développe des applications web{" "}
-          <Bold>
-            intuitives, maintenables et centrées sur leurs utilisateurs
-          </Bold>{" "}
-          en utilisant des technologies modernes et reconnues comme React,
-          Typescript, Python, Django...
-        </p>
-        <p>
-          J&apos;interviens sur l&apos;ensemble du cycle de développement, de
-          l&apos;interface utilisateur au backend, en privilégiant la{" "}
-          <Bold>collaboration</Bold>, la <Bold>qualité du code</Bold>, la{" "}
-          <Bold>performance</Bold> et <Bold>l&apos;expérience utilisateur</Bold>
-          .
-        </p>
+        <p>{presentation.paragraph1}</p>
+        <p>{presentation.paragraph2}</p>
       </div>
       <div className="mt-5 md:mt-8">
-        <Heading level="3">Projets</Heading>
+        <Heading level="3">{projects.heading}</Heading>
         <div className="flex flex-col gap-y-4 text-justify">
           <div>
-            <p className="mb-3">Dans mon parcours, j&apos;ai été amenée à :</p>
+            <p className="mb-3">{projects.intro}</p>
             <List>
               {PROJECTS.map((project, index) => (
                 <ListItem key={`project-${index}`}>
                   <ListIcon Icon={project.Icon} />
-                  {project.content}
+                  <p>{project.content}</p>
                 </ListItem>
               ))}
             </List>
           </div>
-          <p>
-            J’ai travaillé au sein d’équipes pluridisciplinaires, en{" "}
-            <Bold>collaboration</Bold> avec des Product Manager, des Designer et
-            d’autres développeurs, sur des cycles de développement courts et
-            itératifs.
-          </p>
-          <p>
-            J’ai réalisé quotidiennement des <Bold>reviews de code</Bold> et
-            participé à des sessions de <Bold>peer programming</Bold> et de{" "}
-            <Bold>conception</Bold>, toujours avec le souci de mettre mon
-            expérience et mes connaissances au service de l’équipe.
-          </p>
+          <p>{projects.paragraph1}</p>
+          <p>{projects.paragraph2}</p>
         </div>
       </div>
       <div className="mt-5 md:mt-8">
-        <Heading level="3">Ce que j&apos;apporte à mon équipe</Heading>
+        <Heading level="3">{whatIBring.heading}</Heading>
         <List>
           {WHAT_I_BRING.map((item, index) => (
             <ListItem key={`what-i-bring-${index}`}>
               <ListIcon Icon={item.Icon} />
-              {item.content}
+              <p>{item.content}</p>
             </ListItem>
           ))}
         </List>
       </div>
       <div className="holographic-cards-scrollbar mt-5 md:mt-8">
-        <Heading level="3">Technologies</Heading>
-        <p>
-          Au fil des années, j&apos;ai travaillé avec différentes technologies.
-          En voici quelques-unes !
-        </p>
+        <Heading level="3">{technologies.heading}</Heading>
+        <p>{technologies.intro}</p>
         <SkillsList />
       </div>
     </div>
