@@ -18,18 +18,18 @@ function App() {
       <link
         rel="icon"
         type="image/png"
-        href="neo/favicon-96x96.png"
+        href="/favicon-96x96.png"
         sizes="96x96"
       />
-      <link rel="icon" type="image/svg+xml" href="neo/favicon.svg" />
-      <link rel="shortcut icon" href="neo/favicon.ico" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="shortcut icon" href="/favicon.ico" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="neo/apple-touch-icon.png"
+        href="/apple-touch-icon.png"
       />
       <meta name="apple-mobile-web-app-title" content="Emma's CV" />
-      <link rel="manifest" href="neo/site.webmanifest" />
+      <link rel="manifest" href="/site.webmanifest" />
       <div data-theme={currentTheme} className="min-h-dvh">
         <div
           className={cn(
