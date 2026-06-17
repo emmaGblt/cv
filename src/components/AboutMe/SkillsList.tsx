@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 import { SKILLS } from "@/constants/skills";
-import type { SKILL_TYPE } from "@/types/skills";
+import type { TSKILL_TYPE } from "@/types/skills";
 
 import AnimatedSkillItem from "./AnimatedSkillItem";
 import SkillFilter from "./SkillFilter";
 
-export type FILTER = SKILL_TYPE | "none";
+export type FILTER = TSKILL_TYPE | "none";
 
 function SkillsList() {
   const [filter, setFilter] = useState<FILTER>("none");

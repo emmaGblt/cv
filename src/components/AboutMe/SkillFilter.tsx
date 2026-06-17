@@ -3,7 +3,7 @@ import { RadioGroup } from "@base-ui/react/radio-group";
 import { Eraser } from "lucide-react";
 import { useId } from "react";
 
-import type { SKILL_TYPE } from "@/types/skills";
+import type { TSKILL_TYPE } from "@/types/skills";
 import { cn } from "@/utils/classes";
 
 import type { FILTER } from "./SkillsList";
@@ -12,7 +12,7 @@ const FILTERS = [
   { name: "frontend", value: "frontend" },
   { name: "backend", value: "backend" },
   { name: "devops", value: "devops" }
-] as Array<{ name: string; value: SKILL_TYPE }>;
+] as Array<{ name: string; value: TSKILL_TYPE }>;
 
 type Props = {
   filter: FILTER;

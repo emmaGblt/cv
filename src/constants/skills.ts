@@ -25,9 +25,9 @@ import typescriptLogo from "@assets/typescript.svg";
 import viteLogo from "@assets/vite.svg";
 import vitestLogo from "@assets/vitest.svg";
 
-import type { SKILL } from "@/types/skills";
+import type { TSKILL } from "@/types/skills";
 
-export const SKILLS: Array<SKILL> = [
+export const SKILLS: Array<TSKILL> = [
   {
     key: "javascript",
     type: "frontend",

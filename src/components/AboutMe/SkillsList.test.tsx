@@ -2,11 +2,11 @@ import { render, screen } from "@testing-library/react";
 import userEvent, { type UserEvent } from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, test } from "vitest";
 
-import type { SKILL_TYPE } from "@/types/skills";
+import type { TSKILL_TYPE } from "@/types/skills";
 
 import SkillsList from "./SkillsList";
 
-async function clickOnFilter(user: UserEvent, filter: SKILL_TYPE) {
+async function clickOnFilter(user: UserEvent, filter: TSKILL_TYPE) {
   const radioInput = screen.getByLabelText(filter, {
     selector: "input"
   }) as HTMLInputElement;
